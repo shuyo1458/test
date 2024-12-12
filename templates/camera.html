@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相機拍照上傳</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .camera-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #video {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #canvas {
+            display: none;
+        }
+        .captured-image {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px 0;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+        }
+        .error {
+            color: red;
+        }
+        .preview-container {
+            margin-top: 20px;
+        }
+        .image-gallery {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .image-item {
+            border: 1px solid #ccc;
+            padding: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .image-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .image-item.selected {
+            border: 2px solid #4285f4;
+        }
+        
+        .tab-container {
+            margin-bottom: 20px;
+        }
+        
+        .tab-button {
+            padding: 10px 20px;
+            margin-right: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #f0f0f0;
+        }
+        
+        .tab-button.active {
+            background-color: #4285f4;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .local-preview-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .local-preview-container img {
+            max-width: 300px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="camera-container">
+        <h1>相機拍照上傳</h1>
+        
+        <div class="tab-container">
+            <button class="tab-button active" onclick="showTab('cameraTab', this)">相機拍照</button>
+            <button class="tab-button" onclick="showTab('galleryTab', this)">圖片庫</button>
+        </div>
+        
+        <div id="cameraTab" class="tab-content active">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+            
+            <div class="button-container">
+                <button id="startCamera">開啟相機</button>
+                <button id="capturePhoto" disabled>拍照</button>
+                <button id="uploadPhoto" disabled>上傳</button>
+                <button id="swapFaces" disabled>換臉</button>
+            </div>
+            
+            <div class="preview-container">
+                <h3>相機預覽：</h3>
+                <img id="preview" class="captured-image">
+            </div>
+
+            <div class="local-preview-container">
+                <h3>本機圖片預覽：</h3>
+                <img id="localPreview" class="image-preview">
+            </div>
+
+            <div class="image-gallery">
+                <h3>本機圖片目錄：</h3>
+                <div id="localImageGrid" class="image-grid">
+                    <!-- 本機圖片將通過 JavaScript 動態載入 -->
+                </div>
+            </div>
+        </div>
+        
+        <div id="galleryTab" class="tab-content">
+            <div class="image-gallery">
+                <h3>已上傳的圖片：</h3>
+                <div id="imageGrid" class="image-grid">
+                    <!-- 圖片將通過 JavaScript 動態載入 -->
+                </div>
+            </div>
+        </div>
+        
+        <p id="errorMessage" class="error"></p>
+        <img id="resultImage" class="captured-image">
+    </div>
+
+    <script>
+        let stream = null;
+        let photoData = null;
+        
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const preview = document.getElementById('preview');
+        const startButton = document.getElementById('startCamera');
+        const captureButton = document.getElementById('capturePhoto');
+        const uploadButton = document.getElementById('uploadPhoto');
+        const swapButton = document.getElementById('swapFaces');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // 開啟相機
+        async function startCamera() {
+            try {
+                console.log("嘗試開啟相機...");
+                stream = await navigator.mediaDevices.getUserMedia({
+                    video: {
+                        facingMode: 'user' // 使用前置相機
+                    }
+                });
+                video.srcObject = stream;
+                startButton.disabled = true;
+                captureButton.disabled = false;
+                swapButton.disabled = false; // 啟用換臉按鈕
+                errorMessage.textContent = '';
+                
+                // 在開啟相機時載入本機圖片
+                loadLocalImages();
+                
+            } catch (err) {
+                errorMessage.textContent = '無法存取相機：' + err.message;
+            }
+        }
+
+        // 拍照
+        function capturePhoto() {
+            const context = canvas.getContext('2d');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            
+            // 將照片轉換為 base64
+            photoData = canvas.toDataURL('image/jpeg');
+            preview.src = photoData;
+            uploadButton.disabled = false;
+            //console.log('Photo Data:', photoData);
+        }
+
+        // 上傳照片
+        async function uploadPhoto() {
+            const preview = document.getElementById('preview');
+            const localPreview = document.getElementById('localPreview');
+            
+            // 檢查是否有任何圖片可以上傳
+            if (!preview.src && !localPreview.src) {
+                errorMessage.textContent = '請先拍照或選擇圖片';
+                return;
+            }
+
+            try {
+                let formData = new FormData();
+                
+                if (photoData) {
+                    // 如果是拍照的圖片
+                    const response = await fetch(photoData);
+                    const blob = await response.blob();
+                    formData.append('photo', blob, 'camera_photo.jpg');
+                } else if (localPreview.src) {
+                    // 如果是從本機選擇的圖片
+                    const filename = localPreview.src.split('/').pop();
+                    formData.append('filename', filename);
+                    
+                    const uploadResponse = await fetch('/api/upload-local-photo', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await uploadResponse.json();
+                    if (result.error) {
+                        throw new Error(result.error);
+                    }
+                    return;
+                }
+
+                errorMessage.textContent = '上傳中...';
+                
+                const uploadResponse = await fetch('/api/upload-photo', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await uploadResponse.json();
+                
+                if (result.error) {
+                    errorMessage.textContent = result.error;
+                } else {
+                    errorMessage.textContent = '上傳成功！';
+                    // 重新載入圖片庫
+                    loadImages();
+                }
+            } catch (err) {
+                errorMessage.textContent = '上傳失敗：' + err.message;
+            }
+        }
+
+        // 換臉功能
+        async function swapFaces() {
+            const localPreview = document.getElementById('localPreview');
+            const Preview = document.getElementById('preview');
+            if (!photoData || !localPreview.src) {
+                errorMessage.textContent = '請先拍照或選擇本機圖片';
+                return;
+            }
+
+            try {
+                const formData = new FormData();
+                const response = await fetch(Preview.src);
+                const blob = await response.blob();
+                //formData.append('source', blob, 'source_photo.jpg');
+                console.log('blob Data:', blob);
+                //formData.append('source', blob);
+                // 將 blob 轉換為 File 物件
+                const sourceFile = new File([blob], 'source_photo.jpg', { type: 'image/jpeg' });
+                formData.append('source', sourceFile);
+
+
+                const localResponse = await fetch(localPreview.src);
+                const localBlob = await localResponse.blob();
+                console.log('Target File:', localBlob);
+                const targetFile = new File([localBlob], 'target_photo.jpg', { type: 'image/jpeg' });
+                formData.append('target', targetFile);
+
+                // 將 localBlob 轉換為 File 物件
+                //if (!allowed_file(localBlob.filename)) {
+                //    errorMessage.textContent = '不支援的文件格式';
+                //    return;
+                //}
+                //const targetFile = new File([localBlob], 'target_photo.jpg', { type: 'image/jpeg' });
+         
+                
+                //formData.append('target', localBlob, 'target_photo.jpg');
+                //const targetFile = new File([localBlob], 'target_photo.jpg', { type: 'image/jpeg' });
+                //console.log('Local Preview:', localPreview.files[0]);
+                //formData.append('target', targetFile);
+
+                errorMessage.textContent = '換臉中，請稍候...';
+                console.log('formData:', formData);
+
+                const swapResponse = await fetch('/api/test-faceswap', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const swapResult = await swapResponse.json();
+                
+                if (swapResult.error) {
+                    errorMessage.textContent = swapResult.error;
+                    document.getElementById('resultImage').src = '';
+                } else {
+                    errorMessage.textContent = '換臉成功！';
+                    document.getElementById('resultImage').src = swapResult.result;
+                }
+            } catch (err) {
+                errorMessage.textContent = '換臉失敗：' + err.message;
+            }
+        }
+        async function loadImages() {
+            try {
+                const response = await fetch('/api/list-images');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                const imageGrid = document.getElementById('imageGrid');
+                imageGrid.innerHTML = ''; // 清空現有內容
+                
+                if (data.images && data.images.length > 0) {
+                    data.images.forEach(image => {
+                        const imageItem = document.createElement('div');
+                        imageItem.className = 'image-item';
+                        imageItem.innerHTML = `
+                            <img src="${image.url}" alt="${image.filename}">
+                            <div>${image.filename}</div>
+                        `;
+                        imageItem.onclick = () => selectImage(image.url);
+                        imageGrid.appendChild(imageItem);
+                    });
+                } else {
+                    imageGrid.innerHTML = '<p>沒有找到任何圖片</p>';
+                }
+            } catch (error) {
+                console.error('載入圖片失敗：', error);
+                document.getElementById('errorMessage').textContent = '載入圖片失敗：' + error.message;
+            }
+        }
+
+
+        async function loadLocalImages() {
+            try {
+                const response = await fetch('/api/list-local-images');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                const localImageGrid = document.getElementById('localImageGrid');
+                localImageGrid.innerHTML = ''; // 清空現有內容
+                
+                if (data.images && data.images.length > 0) {
+                    data.images.forEach(image => {
+                        const imageItem = document.createElement('div');
+                        imageItem.className = 'image-item';
+                        imageItem.innerHTML = `
+                            <img src="/img/${image.filename}" alt="${image.filename}">
+                            <div>${image.filename}</div>
+                        `;
+                        imageItem.onclick = () => selectLocalImage(image.filename);
+                        localImageGrid.appendChild(imageItem);
+                    });
+                } else {
+                    localImageGrid.innerHTML = '<p>沒有找到任何本機圖片</p>';
+                }
+            } catch (error) {
+                console.error('載入本機圖片失敗：', error);
+                document.getElementById('errorMessage').textContent = '載入本機圖片失敗：' + error.message;
+            }
+        }
+        function selectLocalImage(filename) {
+            // 移除其他圖片的選中狀態
+            document.querySelectorAll('.image-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            // 設置選中的圖片
+            event.currentTarget.classList.add('selected');
+            
+            // 在本機圖片預覽區域顯示選中的圖片
+            document.getElementById('localPreview').src = `/img/${filename}`;
+            // 不再修改 preview 的 src
+            document.getElementById('uploadPhoto').disabled = false;
+            //photoData = null; // 清除之前可能存在的相機拍攝數據
+        }
+        function showTab(tabId, button) {
+            // 隱藏所有內容
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 移除所有按鈕的 active 狀態
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // 顯示選中的內容
+            document.getElementById(tabId).classList.add('active');
+            
+            // 設置按鈕狀態
+            button.classList.add('active');
+            
+            // 根據標籤頁載入相應的內容
+            if (tabId === 'galleryTab') {
+                loadImages();
+            } else if (tabId === 'cameraTab') {
+                loadLocalImages();
+            }
+        }
+
+
+        // 事件監聽
+        startButton.addEventListener('click', startCamera);
+        captureButton.addEventListener('click', capturePhoto);
+        uploadButton.addEventListener('click', uploadPhoto);
+        swapButton.addEventListener('click', swapFaces);
+
+        // 頁面關閉時停止相機
+        window.addEventListener('beforeunload', () => {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+            }
+        });
+
+        // 在頁面載入時自動載入本機圖片
+        document.addEventListener('DOMContentLoaded', function() {
+            loadLocalImages();
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceSwap URL 測試頁面</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .image-preview {
+            max-width: 300px;
+            margin: 10px 0;
+        }
+        .result-container {
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        input[type="url"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        .tab-container {
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            margin-right: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #f0f0f0;
+        }
+        .tab-button.active {
+            background-color: #4285f4;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>FaceSwap 測試頁面</h1>
+    
+    <div class="tab-container">
+        <button class="tab-button active" onclick="showTab('urlForm')">URL 上傳</button>
+        <button class="tab-button" onclick="showTab('taskForm')">任務 ID 查詢</button>
+    </div>
+
+    <div id="urlForm" class="tab-content active">
+        <form id="faceswapUrlForm">
+            <div class="input-group">
+                <h3>來源圖片 URL（包含要換的臉）：</h3>
+                <input type="url" id="sourceUrl" required placeholder="輸入圖片URL">
+                <img id="sourcePreview" class="image-preview">
+            </div>
+            
+            <div class="input-group">
+                <h3>目標圖片 URL（要被換臉的圖片）：</h3>
+                <input type="url" id="targetUrl" required placeholder="輸入圖片URL">
+                <img id="targetPreview" class="image-preview">
+            </div>
+            
+            <button type="submit">執行換臉</button>
+        </form>
+    </div>
+
+    <div id="taskForm" class="tab-content">
+        <form id="taskQueryForm">
+            <div class="input-group">
+                <h3>任務 ID：</h3>
+                <input type="text" id="taskId" required placeholder="輸入任務ID">
+            </div>
+            <button type="submit">查詢結果</button>
+        </form>
+    </div>
+    
+    <div class="result-container">
+        <h3>結果：</h3>
+        <img id="resultImage" class="image-preview">
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // 隱藏所有 tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            // 移除所有 tab button 的 active 狀態
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // 顯示選中的 tab content
+            document.getElementById(tabId).classList.add('active');
+            // 設置對應的 button 為 active
+            event.target.classList.add('active');
+        }
+
+        // 預覽輸入的圖片URL
+        async function previewImageUrl(url, previewElement) {
+            try {
+                previewElement.src = url;
+            } catch (error) {
+                console.error('預覽圖片失敗:', error);
+            }
+        }
+
+        // 設置圖片URL預覽
+        document.getElementById('sourceUrl').addEventListener('input', function() {
+            previewImageUrl(this.value, document.getElementById('sourcePreview'));
+        });
+        
+        document.getElementById('targetUrl').addEventListener('input', function() {
+            previewImageUrl(this.value, document.getElementById('targetPreview'));
+        });
+
+        // 處理 URL 表單提交
+        document.getElementById('faceswapUrlForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const sourceUrl = document.getElementById('sourceUrl').value;
+            const targetUrl = document.getElementById('targetUrl').value;
+            
+            try {
+                document.getElementById('errorMessage').textContent = '處理中，請稍候...';
+                const response = await fetch('/api/test-faceswap-url', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        source_url: sourceUrl,
+                        target_url: targetUrl
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    document.getElementById('errorMessage').textContent = data.error;
+                    document.getElementById('resultImage').src = '';
+                } else {
+                    document.getElementById('errorMessage').textContent = '';
+                    document.getElementById('resultImage').src = data.result;
+                }
+            } catch (error) {
+                document.getElementById('errorMessage').textContent = '發生錯誤：' + error.message;
+                document.getElementById('resultImage').src = '';
+            }
+        });
+
+        // 處理任務查詢表單提交
+        document.getElementById('taskQueryForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const taskId = document.getElementById('taskId').value;
+            
+            try {
+                document.getElementById('errorMessage').textContent = '查詢中，請稍候...';
+                const response = await fetch('/api/fetch-task-result', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        task_id: taskId
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    document.getElementById('errorMessage').textContent = data.error;
+                    document.getElementById('resultImage').src = '';
+                } else {
+                    document.getElementById('errorMessage').textContent = '';
+                    document.getElementById('resultImage').src = data.result;
+                }
+            } catch (error) {
+                document.getElementById('errorMessage').textContent = '發生錯誤：' + error.message;
+                document.getElementById('resultImage').src = '';
+            }
+        });
+    </script>
+</body>
+</html> 

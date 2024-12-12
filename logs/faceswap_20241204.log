@@ -1,0 +1,453 @@
+2024-12-04 01:01:17,706 - INFO - 啟動 Face Swap API 服務
+2024-12-04 01:01:18,847 - INFO - 啟動 Face Swap API 服務
+2024-12-04 01:01:52,250 - INFO - 開始上傳圖片: source_1733245312.jpg
+2024-12-04 01:01:55,075 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 01:01:55,091 - INFO - 開始上傳圖片: target_1733245315.jpg
+2024-12-04 01:02:01,002 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 01:02:01,002 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 01:02:06,709 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 01:02:06,710 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"e9a625a8-01b1-4e00-8339-acdb4fa64970","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-03T17:02:01.579099792Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 01:02:06,710 - INFO - 成功創建任務，task_id: e9a625a8-01b1-4e00-8339-acdb4fa64970
+2024-12-04 01:02:06,710 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-04 01:02:07,429 - ERROR - 輪詢任務狀態時發生錯誤: 處理失敗: insufficient credits, 402
+failed to do request
+2024-12-04 01:02:07,429 - ERROR - 處理 API 響應失敗: 處理失敗: insufficient credits, 402
+failed to do request
+2024-12-04 01:02:07,429 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 51, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 74, in _handle_api_response
+    return self._poll_task_status(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 107, in _poll_task_status
+    raise Exception(f"處理失敗: {error_msg}")
+Exception: 處理失敗: insufficient credits, 402
+failed to do request
+2024-12-04 01:02:07,429 - ERROR - FaceSwap 處理失敗: 處理失敗: insufficient credits, 402
+failed to do request
+2024-12-04 01:07:24,563 - INFO - 啟動 Face Swap API 服務
+2024-12-04 01:07:56,117 - INFO - 開始上傳圖片: source_1733245676.jpg
+2024-12-04 01:07:58,662 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 01:07:58,662 - INFO - 開始上傳圖片: target_1733245678.jpg
+2024-12-04 01:08:04,304 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 01:08:04,304 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 01:08:06,119 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 01:08:06,126 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"336f2bc5-433a-41d4-b08e-e2354649d212","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-03T17:08:04.890224893Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 01:08:06,127 - INFO - 成功創建任務，task_id: 336f2bc5-433a-41d4-b08e-e2354649d212
+2024-12-04 01:08:06,130 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-04 01:08:06,902 - ERROR - 輪詢任務狀態時發生錯誤: 處理失敗: insufficient credits, 402
+failed to do request
+2024-12-04 01:08:06,904 - ERROR - 處理 API 響應失敗: 處理失敗: insufficient credits, 402
+failed to do request
+2024-12-04 01:08:06,904 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 51, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 74, in _handle_api_response
+    return self._poll_task_status(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 107, in _poll_task_status
+    raise Exception(f"處理失敗: {error_msg}")
+Exception: 處理失敗: insufficient credits, 402
+failed to do request
+2024-12-04 01:08:06,909 - ERROR - FaceSwap 處理失敗: 處理失敗: insufficient credits, 402
+failed to do request
+2024-12-04 05:29:28,354 - INFO - 開始上傳圖片: source_1733261368.jpg
+2024-12-04 05:29:30,543 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 05:29:30,543 - INFO - 開始上傳圖片: target_1733261370.jpg
+2024-12-04 05:29:34,814 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 05:29:34,814 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 05:29:36,407 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 05:29:36,407 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"6f7c7442-9f89-4d00-8c05-28cce24fff6d","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-03T21:29:35.32154476Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 05:29:36,411 - INFO - 成功創建任務，task_id: 6f7c7442-9f89-4d00-8c05-28cce24fff6d
+2024-12-04 05:29:36,411 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-04 05:29:37,074 - DEBUG - 任務狀態: processing
+2024-12-04 05:29:39,082 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-04 05:29:39,478 - DEBUG - 任務狀態: processing
+2024-12-04 05:29:41,480 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-04 05:29:42,153 - DEBUG - 任務狀態: processing
+2024-12-04 05:29:44,158 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-04 05:29:44,542 - DEBUG - 任務狀態: processing
+2024-12-04 05:29:46,557 - DEBUG - 正在檢查任務狀態，第 5 次嘗試
+2024-12-04 05:29:46,936 - ERROR - 輪詢任務狀態時發生錯誤: 無法獲取結果 URL
+2024-12-04 05:29:46,936 - ERROR - 處理 API 響應失敗: 無法獲取結果 URL
+2024-12-04 05:29:46,951 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 51, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 74, in _handle_api_response
+    return self._poll_task_status(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 104, in _poll_task_status
+    raise Exception("無法獲取結果 URL")
+Exception: 無法獲取結果 URL
+2024-12-04 05:29:46,951 - ERROR - FaceSwap 處理失敗: 無法獲取結果 URL
+2024-12-04 05:41:58,152 - INFO - 啟動 Face Swap API 服務
+2024-12-04 05:41:59,173 - INFO - 啟動 Face Swap API 服務
+2024-12-04 05:44:17,705 - INFO - 開始上傳圖片: source_1733262257.jpg
+2024-12-04 05:44:19,304 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 05:44:19,306 - INFO - 開始上傳圖片: target_1733262259.jpg
+2024-12-04 05:44:21,979 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 05:44:21,980 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 05:44:23,642 - INFO - 成功創建任務，task_id: 2b0f575e-ea00-40cc-9168-a18978d1ce5e
+2024-12-04 05:44:23,642 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 05:44:23,642 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"2b0f575e-ea00-40cc-9168-a18978d1ce5e","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-03T21:44:22.555324412Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 05:44:23,642 - INFO - PIAPI 圖片id:2b0f575e-ea00-40cc-9168-a18978d1ce5e
+2024-12-04 05:44:24,012 - ERROR - 處理 API 響應失敗: API 錯誤: task not found
+2024-12-04 05:44:24,028 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 74, in process_images
+    return self._handle_api_response(fetch_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 90, in _handle_api_response
+    raise Exception(f"API 錯誤: {error_message}")
+Exception: API 錯誤: task not found
+2024-12-04 05:44:24,035 - ERROR - FaceSwap 處理失敗: API 錯誤: task not found
+2024-12-04 06:03:43,147 - INFO - 啟動 Face Swap API 服務
+2024-12-04 06:04:14,772 - INFO - 開始上傳圖片: source_1733263454.jpg
+2024-12-04 06:04:17,058 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 06:04:17,058 - INFO - 開始上傳圖片: target_1733263457.jpg
+2024-12-04 06:04:21,626 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 06:04:21,626 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 06:04:23,181 - INFO - 成功創建任務，task_id: 67c6671d-20dd-4501-9432-c9dce551d53e
+2024-12-04 06:04:23,197 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 06:04:23,197 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"67c6671d-20dd-4501-9432-c9dce551d53e","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-03T22:04:22.183772697Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 06:04:23,204 - INFO - PIAPI 圖片id:67c6671d-20dd-4501-9432-c9dce551d53e
+2024-12-04 06:04:23,858 - ERROR - 獲取圖片 URL 失敗, 狀態碼: 404
+2024-12-04 06:04:23,858 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 91, in process_images
+    raise Exception("獲取圖片 URL 失敗")
+Exception: 獲取圖片 URL 失敗
+2024-12-04 06:04:23,858 - ERROR - FaceSwap 處理失敗: 獲取圖片 URL 失敗
+2024-12-04 06:21:39,443 - INFO - 啟動 Face Swap API 服務
+2024-12-04 06:22:43,905 - INFO - 開始上傳圖片: source_1733264563.jpg
+2024-12-04 06:22:45,842 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 06:22:45,842 - INFO - 開始上傳圖片: target_1733264565.jpg
+2024-12-04 06:22:49,804 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 06:22:49,804 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 06:22:51,271 - INFO - 成功創建任務，task_id: 8d707bb9-a2e0-4bb0-a1e1-e26b99150d2d
+2024-12-04 06:22:51,271 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 06:22:51,271 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"8d707bb9-a2e0-4bb0-a1e1-e26b99150d2d","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-03T22:22:50.269456108Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 06:22:51,271 - INFO - PIAPI 圖片id:8d707bb9-a2e0-4bb0-a1e1-e26b99150d2d
+2024-12-04 06:22:51,913 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 92, in process_images
+    sucess_url = upload_image(open('result_image.jpg', 'rb'), 'result_image.jpg')
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'result_image.jpg'
+2024-12-04 06:22:51,929 - ERROR - FaceSwap 處理失敗: [Errno 2] No such file or directory: 'result_image.jpg'
+2024-12-04 06:31:07,954 - INFO - 啟動 Face Swap API 服務
+2024-12-04 06:31:30,392 - INFO - 開始上傳圖片: source_1733265090.jpg
+2024-12-04 06:31:32,451 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 06:31:32,451 - INFO - 開始上傳圖片: target_1733265092.jpg
+2024-12-04 06:31:35,805 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 06:31:35,821 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 06:31:37,412 - INFO - 成功創建任務，task_id: 7ddce28b-ae98-4697-acff-7477870e8132
+2024-12-04 06:31:37,413 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 06:31:37,414 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"7ddce28b-ae98-4697-acff-7477870e8132","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-03T22:31:36.327950904Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 06:31:37,417 - INFO - PIAPI 圖片id:7ddce28b-ae98-4697-acff-7477870e8132
+2024-12-04 06:31:38,059 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 91, in process_images
+    sucess_url = upload_image(BytesIO(image_content), f"sucess_{int(time.time())}.jpg")
+                              ^^^^^^^
+NameError: name 'BytesIO' is not defined
+2024-12-04 06:31:38,059 - ERROR - FaceSwap 處理失敗: name 'BytesIO' is not defined
+2024-12-04 06:37:22,549 - INFO - 啟動 Face Swap API 服務
+2024-12-04 06:37:36,181 - INFO - 開始上傳圖片: source_1733265456.jpg
+2024-12-04 06:37:37,888 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 06:37:37,888 - INFO - 開始上傳圖片: target_1733265457.jpg
+2024-12-04 06:37:42,251 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 06:37:42,262 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 06:37:43,868 - INFO - 成功創建任務，task_id: 37307795-9ec0-40d7-8a07-85d5b8b0c89f
+2024-12-04 06:37:43,868 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 06:37:43,868 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"37307795-9ec0-40d7-8a07-85d5b8b0c89f","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-03T22:37:42.897158713Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 06:37:43,868 - INFO - PIAPI 圖片id:37307795-9ec0-40d7-8a07-85d5b8b0c89f
+2024-12-04 06:37:44,253 - ERROR - 獲取圖片 錯誤：404
+2024-12-04 06:37:44,266 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 99, in process_images
+    return self._handle_api_response(sucess_url)
+                                     ^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'sucess_url' where it is not associated with a value
+2024-12-04 06:37:44,271 - ERROR - FaceSwap 處理失敗: cannot access local variable 'sucess_url' where it is not associated with a value
+2024-12-04 08:02:48,802 - INFO - 啟動 Face Swap API 服務
+2024-12-04 11:00:06,207 - INFO - 啟動 Face Swap API 服務
+2024-12-04 11:00:34,961 - INFO - 開始上傳圖片: source_1733281234.jpg
+2024-12-04 11:00:36,662 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 11:00:36,662 - INFO - 開始上傳圖片: target_1733281236.jpg
+2024-12-04 11:00:40,746 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 11:00:40,746 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 11:00:42,309 - INFO - 成功創建任務，task_id: a2945daf-fc9f-4c05-81ae-f3f5f86928c5
+2024-12-04 11:00:42,309 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 11:00:42,309 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"a2945daf-fc9f-4c05-81ae-f3f5f86928c5","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-04T03:00:41.343588966Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 11:00:42,309 - INFO - PIAPI 圖片id:a2945daf-fc9f-4c05-81ae-f3f5f86928c5
+2024-12-04 11:00:42,965 - ERROR - 獲取圖片 錯誤：404
+2024-12-04 11:00:42,971 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 97, in process_images
+    return self._handle_api_response(sucess_url)
+                                     ^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'sucess_url' where it is not associated with a value
+2024-12-04 11:00:42,974 - ERROR - FaceSwap 處理失敗: cannot access local variable 'sucess_url' where it is not associated with a value
+2024-12-04 11:10:11,387 - INFO - 啟動 Face Swap API 服務
+2024-12-04 11:10:34,521 - INFO - 開始上傳圖片: source_1733281834.jpg
+2024-12-04 11:10:36,032 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 11:10:36,045 - INFO - 開始上傳圖片: target_1733281836.jpg
+2024-12-04 11:10:39,382 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 11:10:39,384 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 11:10:41,231 - INFO - 成功創建任務，task_id: cc6549da-fbfd-4b4c-a872-d57d7416faff
+2024-12-04 11:10:41,231 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 11:10:41,231 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"cc6549da-fbfd-4b4c-a872-d57d7416faff","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-04T03:10:39.999628998Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 11:10:41,242 - INFO - PIAPI 圖片id:cc6549da-fbfd-4b4c-a872-d57d7416faff
+2024-12-04 11:10:42,061 - INFO - PIAPI 響應狀態碼: {"code":404,"message":"task not found"}
+2024-12-04 11:10:42,061 - ERROR - 獲取圖片 錯誤：404
+2024-12-04 11:10:42,070 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 98, in process_images
+    return self._handle_api_response(image_url)
+                                     ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'image_url' where it is not associated with a value
+2024-12-04 11:10:42,070 - ERROR - FaceSwap 處理失敗: cannot access local variable 'image_url' where it is not associated with a value
+2024-12-04 11:19:11,591 - INFO - 啟動 Face Swap API 服務
+2024-12-04 11:29:19,511 - INFO - 啟動 Face Swap API 服務
+2024-12-04 11:32:12,363 - INFO - 開始上傳圖片: source_1733283132.jpg
+2024-12-04 11:32:14,147 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 11:32:14,150 - INFO - 開始上傳圖片: target_1733283134.jpg
+2024-12-04 11:32:17,465 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 11:32:17,468 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 11:32:18,469 - INFO - PIAPI 響應狀態碼: 400
+2024-12-04 11:32:18,470 - INFO - PIAPI 響應內容: {"code":400,"message":"invalid request"}
+2024-12-04 11:32:18,479 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 59, in process_images
+    logger.info(f"PIAPI 圖片id:{task_id}")
+                                ^^^^^^^
+UnboundLocalError: cannot access local variable 'task_id' where it is not associated with a value
+2024-12-04 11:32:18,487 - ERROR - FaceSwap 處理失敗: cannot access local variable 'task_id' where it is not associated with a value
+2024-12-04 11:38:21,546 - INFO - 啟動 Face Swap API 服務
+2024-12-04 12:53:52,405 - INFO - 啟動 Face Swap API 服務
+2024-12-04 12:57:22,975 - INFO - 啟動 Face Swap API 服務
+2024-12-04 12:57:48,946 - INFO - 開始上傳圖片: source_1733288268.jpg
+2024-12-04 12:57:50,982 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 12:57:50,982 - INFO - 開始上傳圖片: target_1733288270.jpg
+2024-12-04 12:57:54,055 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 12:57:54,071 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png', 'result_type': 'url'}}
+2024-12-04 12:57:54,758 - INFO - PIAPI 響應狀態碼: 400
+2024-12-04 12:57:54,758 - INFO - PIAPI 響應內容: {"code":400,"message":"invalid request"}
+2024-12-04 12:57:54,776 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 60, in process_images
+    logger.info(f"PIAPI 圖片id:{task_id}")
+                                ^^^^^^^
+UnboundLocalError: cannot access local variable 'task_id' where it is not associated with a value
+2024-12-04 12:57:54,785 - ERROR - FaceSwap 處理失敗: cannot access local variable 'task_id' where it is not associated with a value
+2024-12-04 12:59:22,999 - INFO - 啟動 Face Swap API 服務
+2024-12-04 13:38:39,858 - INFO - 開始上傳圖片: source_1733290719.jpg
+2024-12-04 13:38:41,374 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 13:38:41,374 - INFO - 開始上傳圖片: target_1733290721.jpg
+2024-12-04 13:38:44,941 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 13:38:44,941 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png', 'result_type': 'url'}}
+2024-12-04 13:38:45,624 - INFO - PIAPI 響應狀態碼: 400
+2024-12-04 13:38:45,624 - INFO - PIAPI 響應內容: {"code":400,"message":"invalid request"}
+2024-12-04 13:38:45,624 - ERROR - 處理 API 響應失敗: API 錯誤: invalid request
+2024-12-04 13:38:45,624 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 62, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 78, in _handle_api_response
+    raise Exception(f"API 錯誤: {error_message}")
+Exception: API 錯誤: invalid request
+2024-12-04 13:38:45,628 - ERROR - FaceSwap 處理失敗: API 錯誤: invalid request
+2024-12-04 14:09:31,672 - INFO - 啟動 Face Swap API 服務
+2024-12-04 14:09:48,735 - INFO - 開始上傳圖片: source_1733292588.jpg
+2024-12-04 14:09:50,905 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 14:09:50,905 - INFO - 開始上傳圖片: target_1733292590.jpg
+2024-12-04 14:09:56,445 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 14:09:56,445 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 39, in process_images
+    payload = json.dumps({
+              ^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type FileStorage is not JSON serializable
+2024-12-04 14:09:56,466 - ERROR - FaceSwap 處理失敗: Object of type FileStorage is not JSON serializable
+2024-12-04 14:17:22,192 - INFO - 啟動 Face Swap API 服務
+2024-12-04 14:21:02,002 - INFO - 啟動 Face Swap API 服務
+2024-12-04 14:25:18,142 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-04 14:25:18,142 - INFO - 開始上傳圖片: source_1733293518.jpg
+2024-12-04 14:25:20,499 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 14:25:20,499 - INFO - 開始上傳圖片: target_1733293520.jpg
+2024-12-04 14:25:24,680 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 14:25:24,680 - INFO - 發送請求到 PIAPI，payload: {"target_image": "https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg", "swap_image": "https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png", "result_type": "url"}
+2024-12-04 14:25:25,419 - INFO - PIAPI 響應狀態碼: 400
+2024-12-04 14:25:25,419 - INFO - PIAPI 響應內容: {"code":400,"message":"invalid request"}
+2024-12-04 14:25:25,419 - ERROR - 處理 API 響應失敗: API 錯誤: invalid request
+2024-12-04 14:25:25,419 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 69, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 85, in _handle_api_response
+    raise Exception(f"API 錯誤: {error_message}")
+Exception: API 錯誤: invalid request
+2024-12-04 14:25:25,436 - ERROR - FaceSwap 處理失敗: API 錯誤: invalid request
+2024-12-04 14:44:57,017 - INFO - 啟動 Face Swap API 服務
+2024-12-04 14:45:19,647 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-04 14:45:19,648 - INFO - 開始上傳圖片: source_1733294719.jpg
+2024-12-04 14:45:21,648 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 14:45:21,651 - INFO - 開始上傳圖片: target_1733294721.jpg
+2024-12-04 14:45:26,486 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 14:45:26,489 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 14:45:28,501 - INFO - 成功創建任務，task_id: 48665a11-4b6d-4513-af15-d962e0f6163c
+2024-12-04 14:45:28,503 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 14:45:28,504 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"48665a11-4b6d-4513-af15-d962e0f6163c","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-04T06:45:27.133825836Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 14:45:28,506 - ERROR - 處理 API 響應失敗: 'dict' object has no attribute 'text'
+2024-12-04 14:45:28,506 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 69, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 88, in _handle_api_response
+    logger.info(f'responses 響應內容: {response_data.text}')
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'text'
+2024-12-04 14:45:28,513 - ERROR - FaceSwap 處理失敗: 'dict' object has no attribute 'text'
+2024-12-04 14:47:09,723 - INFO - 啟動 Face Swap API 服務
+2024-12-04 14:47:24,086 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-04 14:47:24,086 - INFO - 開始上傳圖片: source_1733294844.jpg
+2024-12-04 14:47:26,154 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 14:47:26,156 - INFO - 開始上傳圖片: target_1733294846.jpg
+2024-12-04 14:47:31,845 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 14:47:31,847 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 14:47:33,581 - INFO - 成功創建任務，task_id: ca9b7682-15f4-4ccf-9d6f-e1a49d3b4a3a
+2024-12-04 14:47:33,583 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 14:47:33,583 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"ca9b7682-15f4-4ccf-9d6f-e1a49d3b4a3a","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-04T06:47:32.350982188Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 14:47:33,590 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': 'ca9b7682-15f4-4ccf-9d6f-e1a49d3b4a3a', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}, 'output': None, 'meta': {'created_at': '2024-12-04T06:47:32.350982188Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 14:47:33,593 - INFO - 成功創建任務，task_id: ca9b7682-15f4-4ccf-9d6f-e1a49d3b4a3a
+2024-12-04 14:47:33,593 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-04 14:47:34,249 - DEBUG - 任務狀態: processing
+2024-12-04 14:47:36,250 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-04 14:47:36,906 - DEBUG - 任務狀態: processing
+2024-12-04 14:47:38,907 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-04 14:47:39,547 - DEBUG - 任務狀態: processing
+2024-12-04 14:47:41,548 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-04 14:47:41,938 - DEBUG - 任務狀態: processing
+2024-12-04 14:47:43,939 - DEBUG - 正在檢查任務狀態，第 5 次嘗試
+2024-12-04 14:47:44,360 - DEBUG - 任務狀態: processing
+2024-12-04 14:47:46,361 - DEBUG - 正在檢查任務狀態，第 6 次嘗試
+2024-12-04 14:47:46,769 - DEBUG - 任務狀態: processing
+2024-12-04 14:47:48,770 - DEBUG - 正在檢查任務狀態，第 7 次嘗試
+2024-12-04 14:47:49,158 - ERROR - 輪詢任務狀態時發生錯誤: 無法獲取結果 URL
+2024-12-04 14:47:49,159 - ERROR - 處理 API 響應失敗: 無法獲取結果 URL
+2024-12-04 14:47:49,160 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 69, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 93, in _handle_api_response
+    return self._poll_task_status(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 168, in _poll_task_status
+    raise Exception("無法獲取結果 URL")
+Exception: 無法獲取結果 URL
+2024-12-04 14:47:49,168 - ERROR - FaceSwap 處理失敗: 無法獲取結果 URL
+2024-12-04 15:11:49,018 - INFO - 啟動 Face Swap API 服務
+2024-12-04 15:15:00,719 - INFO - 啟動 Face Swap API 服務
+2024-12-04 15:16:00,428 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-04 15:16:00,429 - INFO - 開始上傳圖片: source_1733296560.jpg
+2024-12-04 15:16:02,396 - INFO - 圖片上傳成功: https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg
+2024-12-04 15:16:02,398 - INFO - 開始上傳圖片: target_1733296562.jpg
+2024-12-04 15:16:06,975 - INFO - 圖片上傳成功: https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png
+2024-12-04 15:16:06,977 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}}
+2024-12-04 15:16:08,801 - INFO - 成功創建任務，task_id: 086d106b-bea7-430e-a75a-59f0838ee5c7
+2024-12-04 15:16:08,802 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 15:16:08,802 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"086d106b-bea7-430e-a75a-59f0838ee5c7","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg","target_image":"https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png"},"output":null,"meta":{"created_at":"2024-12-04T07:16:07.462469492Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 15:16:08,804 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': '086d106b-bea7-430e-a75a-59f0838ee5c7', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png'}, 'output': None, 'meta': {'created_at': '2024-12-04T07:16:07.462469492Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 15:16:08,807 - INFO - 成功創建任務，task_id: 086d106b-bea7-430e-a75a-59f0838ee5c7
+2024-12-04 15:16:08,807 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-04 15:16:09,473 - INFO - status :{'code': 200, 'data': {'task_id': '086d106b-bea7-430e-a75a-59f0838ee5c7', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T07:16:07.462469492Z', 'started_at': '2024-12-04T07:16:08.611760281Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 15:16:09,480 - DEBUG - 任務狀態: processing
+2024-12-04 15:16:11,480 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-04 15:16:12,162 - INFO - status :{'code': 200, 'data': {'task_id': '086d106b-bea7-430e-a75a-59f0838ee5c7', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T07:16:07.462469492Z', 'started_at': '2024-12-04T07:16:08.611760281Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 15:16:12,164 - DEBUG - 任務狀態: processing
+2024-12-04 15:16:14,164 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-04 15:16:14,855 - INFO - status :{'code': 200, 'data': {'task_id': '086d106b-bea7-430e-a75a-59f0838ee5c7', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T07:16:07.462469492Z', 'started_at': '2024-12-04T07:16:08.611760281Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 15:16:14,863 - DEBUG - 任務狀態: processing
+2024-12-04 15:16:16,864 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-04 15:16:17,273 - INFO - status :{'code': 200, 'data': {'task_id': '086d106b-bea7-430e-a75a-59f0838ee5c7', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T07:16:07.462469492Z', 'started_at': '2024-12-04T07:16:08.611760281Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 15:16:17,276 - DEBUG - 任務狀態: processing
+2024-12-04 15:16:19,277 - DEBUG - 正在檢查任務狀態，第 5 次嘗試
+2024-12-04 15:16:19,657 - INFO - status :{'code': 200, 'data': {'task_id': '086d106b-bea7-430e-a75a-59f0838ee5c7', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/Mc74MB3/source-1733245312-jpg.jpg', 'target_image': 'https://i.ibb.co/SfDB2FQ/target-1733245315-jpg.png', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/b71b154d-5c83-4499-bd21-d7fb3d42c021.png'}, 'meta': {'created_at': '2024-12-04T07:16:07.462469492Z', 'started_at': '2024-12-04T07:16:08.611760281Z', 'ended_at': '2024-12-04T07:16:18.723052835Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 15:16:19,668 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/b71b154d-5c83-4499-bd21-d7fb3d42c021.png
+2024-12-04 23:47:16,539 - INFO - 啟動 Face Swap API 服務
+2024-12-04 23:50:05,655 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-04 23:50:05,656 - INFO - 開始上傳圖片: source_1733327405.jpg
+2024-12-04 23:50:08,382 - INFO - 圖片上傳成功: https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg
+2024-12-04 23:50:08,387 - INFO - 開始上傳圖片: target_1733327408.jpg
+2024-12-04 23:50:14,014 - INFO - 圖片上傳成功: https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png
+2024-12-04 23:50:14,029 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png'}}
+2024-12-04 23:50:17,218 - INFO - 成功創建任務，task_id: 6caa45cb-f00d-461c-9c8c-9afaf6f34969
+2024-12-04 23:50:17,218 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 23:50:17,218 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"6caa45cb-f00d-461c-9c8c-9afaf6f34969","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg","target_image":"https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png"},"output":null,"meta":{"created_at":"2024-12-04T15:50:14.627062501Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 23:50:17,234 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': '6caa45cb-f00d-461c-9c8c-9afaf6f34969', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png'}, 'output': None, 'meta': {'created_at': '2024-12-04T15:50:14.627062501Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:50:17,234 - INFO - 成功創建任務，task_id: 6caa45cb-f00d-461c-9c8c-9afaf6f34969
+2024-12-04 23:50:17,234 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-04 23:50:17,906 - INFO - status :{'code': 200, 'data': {'task_id': '6caa45cb-f00d-461c-9c8c-9afaf6f34969', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T15:50:14.627062501Z', 'started_at': '2024-12-04T15:50:17.031388924Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:50:17,906 - DEBUG - 任務狀態: processing
+2024-12-04 23:50:19,914 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-04 23:50:20,631 - INFO - status :{'code': 200, 'data': {'task_id': '6caa45cb-f00d-461c-9c8c-9afaf6f34969', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T15:50:14.627062501Z', 'started_at': '2024-12-04T15:50:17.031388924Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:50:20,631 - DEBUG - 任務狀態: processing
+2024-12-04 23:50:22,639 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-04 23:50:23,308 - INFO - status :{'code': 200, 'data': {'task_id': '6caa45cb-f00d-461c-9c8c-9afaf6f34969', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T15:50:14.627062501Z', 'started_at': '2024-12-04T15:50:17.031388924Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:50:23,308 - DEBUG - 任務狀態: processing
+2024-12-04 23:50:25,313 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-04 23:50:25,774 - INFO - status :{'code': 200, 'data': {'task_id': '6caa45cb-f00d-461c-9c8c-9afaf6f34969', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T15:50:14.627062501Z', 'started_at': '2024-12-04T15:50:17.031388924Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:50:25,774 - DEBUG - 任務狀態: processing
+2024-12-04 23:50:27,784 - DEBUG - 正在檢查任務狀態，第 5 次嘗試
+2024-12-04 23:50:28,184 - INFO - status :{'code': 200, 'data': {'task_id': '6caa45cb-f00d-461c-9c8c-9afaf6f34969', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/215d979d-2efd-45ca-8a8a-280ea397cfff.png'}, 'meta': {'created_at': '2024-12-04T15:50:14.627062501Z', 'started_at': '2024-12-04T15:50:17.031388924Z', 'ended_at': '2024-12-04T15:50:27.533553833Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:50:28,184 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/215d979d-2efd-45ca-8a8a-280ea397cfff.png
+2024-12-04 23:50:29,421 - ERROR - 上傳圖片到 imgbb 過程發生錯誤: name 'time' is not defined
+2024-12-04 23:59:21,062 - INFO - 啟動 Face Swap API 服務
+2024-12-04 23:59:38,631 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-04 23:59:38,631 - INFO - 開始上傳圖片: source_1733327978.jpg
+2024-12-04 23:59:40,185 - INFO - 圖片上傳成功: https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg
+2024-12-04 23:59:40,185 - INFO - 開始上傳圖片: target_1733327980.jpg
+2024-12-04 23:59:43,879 - INFO - 圖片上傳成功: https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png
+2024-12-04 23:59:43,895 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png'}}
+2024-12-04 23:59:45,944 - INFO - 成功創建任務，task_id: c5e44199-b74c-4878-9547-732bd97f3bca
+2024-12-04 23:59:45,944 - INFO - PIAPI 響應狀態碼: 200
+2024-12-04 23:59:45,959 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"c5e44199-b74c-4878-9547-732bd97f3bca","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg","target_image":"https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png"},"output":null,"meta":{"created_at":"2024-12-04T15:59:44.719892461Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-04 23:59:45,959 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': 'c5e44199-b74c-4878-9547-732bd97f3bca', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png'}, 'output': None, 'meta': {'created_at': '2024-12-04T15:59:44.719892461Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:59:45,959 - INFO - 成功創建任務，task_id: c5e44199-b74c-4878-9547-732bd97f3bca
+2024-12-04 23:59:45,959 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-04 23:59:47,152 - INFO - status :{'code': 200, 'data': {'task_id': 'c5e44199-b74c-4878-9547-732bd97f3bca', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T15:59:44.719892461Z', 'started_at': '2024-12-04T15:59:45.754375759Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:59:47,152 - DEBUG - 任務狀態: processing
+2024-12-04 23:59:49,165 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-04 23:59:49,986 - INFO - status :{'code': 200, 'data': {'task_id': 'c5e44199-b74c-4878-9547-732bd97f3bca', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T15:59:44.719892461Z', 'started_at': '2024-12-04T15:59:45.754375759Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:59:49,996 - DEBUG - 任務狀態: processing
+2024-12-04 23:59:51,997 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-04 23:59:52,675 - INFO - status :{'code': 200, 'data': {'task_id': 'c5e44199-b74c-4878-9547-732bd97f3bca', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-04T15:59:44.719892461Z', 'started_at': '2024-12-04T15:59:45.754375759Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:59:52,691 - DEBUG - 任務狀態: processing
+2024-12-04 23:59:54,692 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-04 23:59:55,078 - INFO - status :{'code': 200, 'data': {'task_id': 'c5e44199-b74c-4878-9547-732bd97f3bca', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/zbLGS2n/source-1733327405-jpg.jpg', 'target_image': 'https://i.ibb.co/r7VxpdM/target-1733327408-jpg.png', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/20ac1c21-fbe7-41ad-b25c-35685e2f4422.png'}, 'meta': {'created_at': '2024-12-04T15:59:44.719892461Z', 'started_at': '2024-12-04T15:59:45.754375759Z', 'ended_at': '2024-12-04T15:59:54.271610712Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-04 23:59:55,078 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/20ac1c21-fbe7-41ad-b25c-35685e2f4422.png
+2024-12-04 23:59:55,974 - INFO - 開始上傳圖片: success_1733327995.jpg
+2024-12-04 23:59:58,066 - INFO - 圖片上傳成功: https://i.ibb.co/kBrtHnm/success-1733327995-jpg.jpg
+2024-12-04 23:59:58,081 - INFO - 成功上傳圖片到 imgbb, URL: https://i.ibb.co/kBrtHnm/success-1733327995-jpg.jpg

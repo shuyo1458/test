@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceSwap 初始化</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .error {
+            color: red;
+            margin: 20px 0;
+        }
+        .status {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .authorized {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .unauthorized {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FaceSwap 服務初始化</h1>
+        
+        {% if error %}
+        <div class="error">
+            錯誤：{{ error }}
+        </div>
+        {% endif %}
+        
+        <div class="status {% if is_authorized %}authorized{% else %}unauthorized{% endif %}">
+            Google Drive 授權狀態：
+            {% if is_authorized %}
+            已授權
+            {% else %}
+            未授權
+            {% endif %}
+        </div>
+        
+        {% if not is_authorized %}
+        <p>在使用 FaceSwap 服務之前，需要先授權存取您的 Google Drive 空間來儲存圖片。</p>
+        <a href="{{ url_for('test_page') }}" class="btn">授權 Google Drive</a>
+        {% else %}
+        <p>您已完成所有必要設定！</p>
+        <a href="{{ url_for('test_page') }}" class="btn">開始使用 FaceSwap</a>
+        {% endif %}
+    </div>
+</body>
+</html> 

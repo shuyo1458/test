@@ -1,0 +1,816 @@
+2024-12-10 13:01:45,838 - INFO - 啟動 Face Swap API 服務
+2024-12-10 13:01:46,976 - INFO - 啟動 Face Swap API 服務
+2024-12-10 13:04:01,697 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:04:01,703 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:04:01,704 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:04:01,704 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:04:01,705 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:04:01,705 - INFO - 找到 4 張圖片
+2024-12-10 13:04:08,908 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:04:08,910 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:04:08,912 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:04:08,912 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:04:08,913 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:04:08,913 - INFO - 找到 4 張圖片
+2024-12-10 13:05:38,784 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:05:38,785 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:05:38,785 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:05:38,785 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:05:38,785 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:05:38,786 - INFO - 找到 4 張圖片
+2024-12-10 13:05:40,685 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:05:40,685 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:05:40,685 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:05:40,685 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:05:40,685 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:05:40,685 - INFO - 找到 4 張圖片
+2024-12-10 13:05:52,454 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 13:05:52,454 - INFO - 開始上傳圖片: source_1733807152.jpg
+2024-12-10 13:05:53,616 - ERROR - 圖片上傳失敗: HTTP 400
+2024-12-10 13:05:53,617 - ERROR - 圖片上傳過程發生錯誤: 圖片上傳失敗: HTTP 400
+2024-12-10 13:05:53,617 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\utils\image_storage.py", line 41, in upload_image
+    raise Exception(f"圖片上傳失敗: HTTP {response.status_code}")
+Exception: 圖片上傳失敗: HTTP 400
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 21, in process_images
+    source_url = upload_image(source_file, f"source_{int(time.time())}.jpg")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\utils\image_storage.py", line 45, in upload_image
+    raise Exception(f"圖片上傳失敗: {str(e)}")
+Exception: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 13:05:53,627 - ERROR - FaceSwap 處理失敗: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 13:21:01,635 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:21:01,635 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:21:01,636 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:21:01,636 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:21:01,636 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:21:01,637 - INFO - 找到 4 張圖片
+2024-12-10 13:21:04,477 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:21:04,477 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:21:04,478 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:21:04,479 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:21:04,480 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:21:04,480 - INFO - 找到 4 張圖片
+2024-12-10 13:22:05,554 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:22:05,556 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:22:05,556 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:22:05,556 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:22:05,557 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:22:05,557 - INFO - 找到 4 張圖片
+2024-12-10 13:22:07,350 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:22:07,351 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:22:07,351 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:22:07,351 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:22:07,352 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:22:07,352 - INFO - 找到 4 張圖片
+2024-12-10 13:23:27,385 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:23:27,386 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:23:27,386 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:23:27,387 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:23:27,387 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:23:27,388 - INFO - 找到 4 張圖片
+2024-12-10 13:23:29,094 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:23:29,095 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:23:29,095 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:23:29,095 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:23:29,095 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:23:29,096 - INFO - 找到 4 張圖片
+2024-12-10 13:23:47,279 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:23:47,280 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:23:47,280 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:23:47,281 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:23:47,281 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:23:47,282 - INFO - 找到 4 張圖片
+2024-12-10 13:23:48,952 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:23:48,952 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:23:48,952 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:23:48,952 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:23:48,952 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:23:48,952 - INFO - 找到 4 張圖片
+2024-12-10 13:24:59,500 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:24:59,500 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:24:59,501 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:24:59,501 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:24:59,502 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:24:59,502 - INFO - 找到 4 張圖片
+2024-12-10 13:25:01,979 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:25:01,980 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:25:01,980 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:25:01,980 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:25:01,981 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:25:01,981 - INFO - 找到 4 張圖片
+2024-12-10 13:25:45,166 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:25:45,167 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:25:45,167 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:25:45,168 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:25:46,154 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:25:46,155 - INFO - 找到 4 張圖片
+2024-12-10 13:25:51,650 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:25:51,650 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:25:51,650 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:25:51,650 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:25:51,650 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:25:51,650 - INFO - 找到 4 張圖片
+2024-12-10 13:28:18,222 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:28:18,223 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:28:18,223 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:28:18,223 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:28:18,224 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:28:18,224 - INFO - 找到 4 張圖片
+2024-12-10 13:28:22,844 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:28:22,844 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:28:22,844 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:28:22,844 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:28:22,844 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:28:22,844 - INFO - 找到 4 張圖片
+2024-12-10 13:30:24,029 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:30:24,030 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:30:24,030 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:30:24,030 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:30:24,032 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:30:24,032 - INFO - 找到 4 張圖片
+2024-12-10 13:30:27,476 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:30:27,476 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:30:27,476 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:30:27,476 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:30:27,476 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:30:27,476 - INFO - 找到 4 張圖片
+2024-12-10 13:31:16,820 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:31:16,821 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:31:16,822 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:31:16,822 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:31:16,824 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:31:16,824 - INFO - 找到 4 張圖片
+2024-12-10 13:31:18,878 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:31:18,879 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:31:18,879 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:31:18,879 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:31:18,880 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:31:18,880 - INFO - 找到 4 張圖片
+2024-12-10 13:32:48,100 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:32:48,101 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:32:48,101 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:32:48,102 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:32:48,102 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:32:48,103 - INFO - 找到 4 張圖片
+2024-12-10 13:32:52,245 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:32:52,245 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:32:52,245 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:32:52,245 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:32:52,245 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:32:52,245 - INFO - 找到 4 張圖片
+2024-12-10 13:34:20,063 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:34:20,064 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:34:20,065 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:34:20,065 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:34:20,066 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:34:20,066 - INFO - 找到 4 張圖片
+2024-12-10 13:34:22,307 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:34:22,308 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:34:22,309 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:34:22,309 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:34:22,309 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:34:22,310 - INFO - 找到 4 張圖片
+2024-12-10 13:34:27,483 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 13:34:27,483 - INFO - 開始上傳圖片: source_1733808867.jpg
+2024-12-10 13:34:28,572 - ERROR - 圖片上傳失敗: HTTP 400
+2024-12-10 13:34:28,572 - ERROR - 圖片上傳過程發生錯誤: 圖片上傳失敗: HTTP 400
+2024-12-10 13:34:28,573 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\utils\image_storage.py", line 41, in upload_image
+    raise Exception(f"圖片上傳失敗: HTTP {response.status_code}")
+Exception: 圖片上傳失敗: HTTP 400
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 21, in process_images
+    source_url = upload_image(source_file, f"source_{int(time.time())}.jpg")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\utils\image_storage.py", line 45, in upload_image
+    raise Exception(f"圖片上傳失敗: {str(e)}")
+Exception: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 13:34:28,576 - ERROR - FaceSwap 處理失敗: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 13:35:27,602 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:35:27,602 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:35:27,603 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:35:27,603 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:35:27,608 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:35:27,609 - INFO - 找到 4 張圖片
+2024-12-10 13:35:29,362 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:35:29,362 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:35:29,362 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:35:29,362 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:35:29,362 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:35:29,362 - INFO - 找到 4 張圖片
+2024-12-10 13:38:32,012 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:38:32,013 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:38:32,013 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:38:32,013 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:38:32,014 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:38:32,015 - INFO - 找到 4 張圖片
+2024-12-10 13:38:35,143 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:38:35,144 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:38:35,145 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:38:35,145 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:38:35,146 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:38:35,146 - INFO - 找到 4 張圖片
+2024-12-10 13:38:37,875 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:38:37,875 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:38:37,875 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:38:37,875 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:38:37,875 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:38:37,875 - INFO - 找到 4 張圖片
+2024-12-10 13:41:49,598 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:41:49,599 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:41:49,599 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:41:49,600 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:41:49,601 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:41:49,601 - INFO - 找到 4 張圖片
+2024-12-10 13:41:52,521 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:41:52,522 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:41:52,522 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:41:52,525 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:41:52,526 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:41:52,528 - INFO - 找到 4 張圖片
+2024-12-10 13:42:37,924 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:42:37,924 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:42:37,924 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:42:37,925 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:42:37,925 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:42:37,926 - INFO - 找到 4 張圖片
+2024-12-10 13:42:39,912 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:42:39,912 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:42:39,912 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:42:39,912 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:42:39,912 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:42:39,912 - INFO - 找到 4 張圖片
+2024-12-10 13:51:58,342 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:51:58,343 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:51:58,343 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:51:58,344 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:51:58,344 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:51:58,345 - INFO - 找到 4 張圖片
+2024-12-10 13:52:00,916 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:52:00,916 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:52:00,916 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:52:00,916 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:52:00,916 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:52:00,916 - INFO - 找到 4 張圖片
+2024-12-10 13:59:35,939 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:59:35,940 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:59:35,941 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:59:35,942 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:59:35,945 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:59:35,952 - INFO - 找到 4 張圖片
+2024-12-10 13:59:37,937 - INFO - 正在讀取圖片目錄: img
+2024-12-10 13:59:37,937 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 13:59:37,939 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 13:59:37,939 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 13:59:37,940 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 13:59:37,940 - INFO - 找到 4 張圖片
+2024-12-10 14:00:10,292 - INFO - 正在讀取圖片目錄: img
+2024-12-10 14:00:10,293 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 14:00:10,293 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 14:00:10,294 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 14:00:10,294 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 14:00:10,295 - INFO - 找到 4 張圖片
+2024-12-10 14:00:13,062 - INFO - 正在讀取圖片目錄: img
+2024-12-10 14:00:13,062 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 14:00:13,062 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 14:00:13,062 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 14:00:13,062 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 14:00:13,062 - INFO - 找到 4 張圖片
+2024-12-10 15:41:08,114 - INFO - 正在讀取圖片目錄: img
+2024-12-10 15:41:08,115 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 15:41:08,115 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 15:41:08,116 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 15:41:08,116 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 15:41:08,116 - INFO - 找到 4 張圖片
+2024-12-10 15:41:12,837 - INFO - 正在讀取圖片目錄: img
+2024-12-10 15:41:12,839 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 15:41:12,841 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 15:41:12,843 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 15:41:12,844 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 15:41:12,846 - INFO - 找到 4 張圖片
+2024-12-10 15:46:14,803 - INFO - 正在讀取圖片目錄: img
+2024-12-10 15:46:14,808 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 15:46:14,809 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 15:46:14,810 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 15:46:14,810 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 15:46:14,811 - INFO - 找到 4 張圖片
+2024-12-10 15:46:16,800 - INFO - 正在讀取圖片目錄: img
+2024-12-10 15:46:16,800 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 15:46:16,800 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 15:46:16,800 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 15:46:16,800 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 15:46:16,800 - INFO - 找到 4 張圖片
+2024-12-10 16:04:25,663 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:04:25,663 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:04:25,663 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:04:25,665 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:04:25,665 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:04:25,666 - INFO - 找到 4 張圖片
+2024-12-10 16:04:28,848 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:04:28,848 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:04:28,848 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:04:28,848 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:04:28,848 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:04:28,848 - INFO - 找到 4 張圖片
+2024-12-10 16:06:39,143 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:06:39,144 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:06:39,144 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:06:39,145 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:06:39,145 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:06:39,146 - INFO - 找到 4 張圖片
+2024-12-10 16:06:41,827 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:06:41,827 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:06:41,827 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:06:41,827 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:06:41,827 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:06:41,827 - INFO - 找到 4 張圖片
+2024-12-10 16:15:33,744 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:15:33,745 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:15:33,746 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:15:33,746 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:15:33,747 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:15:33,748 - INFO - 找到 4 張圖片
+2024-12-10 16:15:35,879 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:15:35,880 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:15:35,880 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:15:35,881 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:15:35,881 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:15:35,881 - INFO - 找到 4 張圖片
+2024-12-10 16:19:47,530 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:19:47,531 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:19:47,532 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:19:47,532 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:19:47,532 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:19:47,533 - INFO - 找到 4 張圖片
+2024-12-10 16:19:49,167 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:19:49,167 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:19:49,167 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:19:49,167 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:19:49,167 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:19:49,167 - INFO - 找到 4 張圖片
+2024-12-10 16:22:33,329 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:22:33,330 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:22:33,330 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:22:33,331 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:22:33,331 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:22:33,331 - INFO - 找到 4 張圖片
+2024-12-10 16:22:35,857 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:22:35,858 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:22:35,858 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:22:35,858 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:22:35,858 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:22:35,858 - INFO - 找到 4 張圖片
+2024-12-10 16:24:27,262 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:24:27,262 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:24:27,263 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:24:27,263 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:24:27,264 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:24:27,264 - INFO - 找到 4 張圖片
+2024-12-10 16:24:29,551 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:24:29,552 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:24:29,552 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:24:29,552 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:24:29,552 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:24:29,552 - INFO - 找到 4 張圖片
+2024-12-10 16:27:58,920 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:27:58,920 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:27:58,921 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:27:58,921 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:27:58,922 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:27:58,922 - INFO - 找到 4 張圖片
+2024-12-10 16:28:00,424 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:28:00,426 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:28:00,427 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:28:00,429 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:28:00,430 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:28:00,431 - INFO - 找到 4 張圖片
+2024-12-10 16:28:01,899 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:28:01,899 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:28:01,899 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:28:01,899 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:28:01,899 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:28:01,899 - INFO - 找到 4 張圖片
+2024-12-10 16:31:27,848 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:31:27,849 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:31:27,849 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:31:27,850 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:31:27,850 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:31:27,851 - INFO - 找到 4 張圖片
+2024-12-10 16:31:29,846 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:31:29,847 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:31:29,848 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:31:29,848 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:31:29,848 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:31:29,850 - INFO - 找到 4 張圖片
+2024-12-10 16:37:33,965 - INFO - 啟動 Face Swap API 服務
+2024-12-10 16:37:39,562 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:37:39,564 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:37:39,564 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:37:39,565 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:37:39,565 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:37:39,566 - INFO - 找到 4 張圖片
+2024-12-10 16:37:41,588 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:37:41,588 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:37:41,588 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:37:41,588 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:37:41,588 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:37:41,588 - INFO - 找到 4 張圖片
+2024-12-10 16:37:48,001 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'blob' ('image/jpeg')>)]) 
+2024-12-10 16:40:51,356 - INFO - 啟動 Face Swap API 服務
+2024-12-10 16:41:34,311 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: '567867.jpg' ('image/jpeg')>), ('target', <FileStorage: '1.jpg' ('image/jpeg')>)]) 
+2024-12-10 16:41:34,312 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 16:41:34,312 - INFO - 開始上傳圖片: source_1733820094.jpg
+2024-12-10 16:41:35,440 - ERROR - 圖片上傳失敗: HTTP 400
+2024-12-10 16:41:35,440 - ERROR - 圖片上傳過程發生錯誤: 圖片上傳失敗: HTTP 400
+2024-12-10 16:41:35,440 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\utils\image_storage.py", line 41, in upload_image
+    raise Exception(f"圖片上傳失敗: HTTP {response.status_code}")
+Exception: 圖片上傳失敗: HTTP 400
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 21, in process_images
+    source_url = upload_image(source_file, f"source_{int(time.time())}.jpg")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\utils\image_storage.py", line 45, in upload_image
+    raise Exception(f"圖片上傳失敗: {str(e)}")
+Exception: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 16:41:35,457 - ERROR - FaceSwap 處理失敗: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 16:45:38,870 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:45:38,870 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:45:38,871 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:45:38,871 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:45:38,872 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:45:38,872 - INFO - 找到 4 張圖片
+2024-12-10 16:45:41,748 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:45:41,748 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:45:41,748 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:45:41,748 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:45:41,748 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:45:41,748 - INFO - 找到 4 張圖片
+2024-12-10 16:45:46,032 - INFO - request.files ImmutableMultiDict([]) 
+2024-12-10 16:49:53,622 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:49:53,666 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:49:53,682 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:49:53,831 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:49:53,835 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:49:53,836 - INFO - 找到 4 張圖片
+2024-12-10 16:49:56,647 - INFO - 正在讀取圖片目錄: img
+2024-12-10 16:49:56,647 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 16:49:56,647 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 16:49:56,647 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 16:49:56,647 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 16:49:56,647 - INFO - 找到 4 張圖片
+2024-12-10 16:50:00,868 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'source_photo.jpg' ('image/jpeg')>), ('target', <FileStorage: 'target_photo.jpg' ('image/jpeg')>)]) 
+2024-12-10 16:50:00,868 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 16:50:00,869 - INFO - 開始上傳圖片: source_1733820600.jpg
+2024-12-10 16:50:01,784 - ERROR - 圖片上傳失敗: HTTP 400
+2024-12-10 16:50:01,784 - ERROR - 圖片上傳過程發生錯誤: 圖片上傳失敗: HTTP 400
+2024-12-10 16:50:01,785 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\utils\image_storage.py", line 41, in upload_image
+    raise Exception(f"圖片上傳失敗: HTTP {response.status_code}")
+Exception: 圖片上傳失敗: HTTP 400
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 21, in process_images
+    source_url = upload_image(source_file, f"source_{int(time.time())}.jpg")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\utils\image_storage.py", line 45, in upload_image
+    raise Exception(f"圖片上傳失敗: {str(e)}")
+Exception: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 16:50:01,789 - ERROR - FaceSwap 處理失敗: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 17:07:43,693 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'photo_2024-12-10_17-07-03.jpg' ('image/jpeg')>), ('target', <FileStorage: 'xms3.jpg' ('image/jpeg')>)]) 
+2024-12-10 17:07:43,693 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 17:07:43,693 - INFO - 開始上傳圖片: source_1733821663.jpg
+2024-12-10 17:07:44,700 - ERROR - 圖片上傳失敗: HTTP 400
+2024-12-10 17:07:44,700 - ERROR - 圖片上傳過程發生錯誤: 圖片上傳失敗: HTTP 400
+2024-12-10 17:07:44,700 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\utils\image_storage.py", line 41, in upload_image
+    raise Exception(f"圖片上傳失敗: HTTP {response.status_code}")
+Exception: 圖片上傳失敗: HTTP 400
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 21, in process_images
+    source_url = upload_image(source_file, f"source_{int(time.time())}.jpg")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\utils\image_storage.py", line 45, in upload_image
+    raise Exception(f"圖片上傳失敗: {str(e)}")
+Exception: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 17:07:44,715 - ERROR - FaceSwap 處理失敗: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 17:09:52,068 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'photo_2024-12-10_17-07-03.jpg' ('image/jpeg')>), ('target', <FileStorage: 'xms3.jpg' ('image/jpeg')>)]) 
+2024-12-10 17:09:52,068 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 17:09:52,068 - INFO - 開始上傳圖片: source_1733821792.jpg
+2024-12-10 17:09:52,955 - ERROR - 圖片上傳失敗: HTTP 400
+2024-12-10 17:09:52,955 - ERROR - 圖片上傳過程發生錯誤: 圖片上傳失敗: HTTP 400
+2024-12-10 17:09:52,955 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\utils\image_storage.py", line 41, in upload_image
+    raise Exception(f"圖片上傳失敗: HTTP {response.status_code}")
+Exception: 圖片上傳失敗: HTTP 400
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 21, in process_images
+    source_url = upload_image(source_file, f"source_{int(time.time())}.jpg")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\utils\image_storage.py", line 45, in upload_image
+    raise Exception(f"圖片上傳失敗: {str(e)}")
+Exception: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 17:09:52,955 - ERROR - FaceSwap 處理失敗: 圖片上傳失敗: 圖片上傳失敗: HTTP 400
+2024-12-10 17:12:46,286 - INFO - 啟動 Face Swap API 服務
+2024-12-10 17:12:48,894 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'photo_2024-12-10_17-07-03.jpg' ('image/jpeg')>), ('target', <FileStorage: 'xms3.jpg' ('image/jpeg')>)]) 
+2024-12-10 17:12:48,896 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 17:12:48,896 - INFO - 開始上傳圖片: source_1733821968.jpg
+2024-12-10 17:12:50,393 - INFO - 圖片上傳成功: https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg
+2024-12-10 17:12:50,393 - INFO - 開始上傳圖片: target_1733821970.jpg
+2024-12-10 17:12:53,215 - INFO - 圖片上傳成功: https://i.ibb.co/w6LMtMc/target-1733821970-jpg.webp
+2024-12-10 17:12:53,215 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/w6LMtMc/target-1733821970-jpg.webp'}}
+2024-12-10 17:12:55,550 - INFO - 成功創建任務，task_id: e9881fe6-2776-47fe-a09c-da4aa6ed96a4
+2024-12-10 17:12:55,550 - INFO - PIAPI 響應狀態碼: 200
+2024-12-10 17:12:55,550 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"e9881fe6-2776-47fe-a09c-da4aa6ed96a4","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg","target_image":"https://i.ibb.co/w6LMtMc/target-1733821970-jpg.webp"},"output":null,"meta":{"created_at":"2024-12-10T09:12:53.791841034Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-10 17:12:55,550 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': 'e9881fe6-2776-47fe-a09c-da4aa6ed96a4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/w6LMtMc/target-1733821970-jpg.webp'}, 'output': None, 'meta': {'created_at': '2024-12-10T09:12:53.791841034Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:12:55,550 - INFO - 成功創建任務，task_id: e9881fe6-2776-47fe-a09c-da4aa6ed96a4
+2024-12-10 17:12:55,550 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-10 17:12:56,310 - INFO - status :{'code': 200, 'data': {'task_id': 'e9881fe6-2776-47fe-a09c-da4aa6ed96a4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/w6LMtMc/target-1733821970-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:12:53.791841034Z', 'started_at': '2024-12-10T09:12:55.24626485Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:12:56,326 - DEBUG - 任務狀態: processing
+2024-12-10 17:12:58,326 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-10 17:12:59,097 - INFO - status :{'code': 200, 'data': {'task_id': 'e9881fe6-2776-47fe-a09c-da4aa6ed96a4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/w6LMtMc/target-1733821970-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:12:53.791841034Z', 'started_at': '2024-12-10T09:12:55.24626485Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:12:59,097 - DEBUG - 任務狀態: processing
+2024-12-10 17:13:01,101 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-10 17:13:01,896 - INFO - status :{'code': 200, 'data': {'task_id': 'e9881fe6-2776-47fe-a09c-da4aa6ed96a4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/w6LMtMc/target-1733821970-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:12:53.791841034Z', 'started_at': '2024-12-10T09:12:55.24626485Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:13:01,896 - DEBUG - 任務狀態: processing
+2024-12-10 17:13:03,909 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-10 17:13:04,667 - INFO - status :{'code': 200, 'data': {'task_id': 'e9881fe6-2776-47fe-a09c-da4aa6ed96a4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/w6LMtMc/target-1733821970-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:12:53.791841034Z', 'started_at': '2024-12-10T09:12:55.24626485Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:13:04,682 - DEBUG - 任務狀態: processing
+2024-12-10 17:13:06,685 - DEBUG - 正在檢查任務狀態，第 5 次嘗試
+2024-12-10 17:13:07,463 - INFO - status :{'code': 200, 'data': {'task_id': 'e9881fe6-2776-47fe-a09c-da4aa6ed96a4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/w6LMtMc/target-1733821970-jpg.webp', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/906d8bc5-831b-4d9c-9ab7-2b6a481edd56.png'}, 'meta': {'created_at': '2024-12-10T09:12:53.791841034Z', 'started_at': '2024-12-10T09:12:55.24626485Z', 'ended_at': '2024-12-10T09:13:06.332184936Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:13:07,464 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/906d8bc5-831b-4d9c-9ab7-2b6a481edd56.png
+2024-12-10 17:13:08,784 - INFO - 開始上傳圖片: success_1733821988.jpg
+2024-12-10 17:13:11,708 - INFO - 圖片上傳成功: https://i.ibb.co/dc9cBQs/success-1733821988-jpg.jpg
+2024-12-10 17:13:11,723 - INFO - 成功記錄圖片資訊: {'timestamp': 1733821988, 'url': 'https://i.ibb.co/dc9cBQs/success-1733821988-jpg.jpg'}
+2024-12-10 17:13:11,723 - INFO - 成功上傳圖片到 imgbb, URL: https://i.ibb.co/dc9cBQs/success-1733821988-jpg.jpg
+2024-12-10 17:13:37,281 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'photo_2024-12-10_17-07-03.jpg' ('image/jpeg')>), ('target', <FileStorage: 'xms2.jpg' ('image/jpeg')>)]) 
+2024-12-10 17:13:37,282 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 17:13:37,282 - INFO - 開始上傳圖片: source_1733822017.jpg
+2024-12-10 17:13:38,786 - INFO - 圖片上傳成功: https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg
+2024-12-10 17:13:38,786 - INFO - 開始上傳圖片: target_1733822018.jpg
+2024-12-10 17:13:42,130 - INFO - 圖片上傳成功: https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp
+2024-12-10 17:13:42,130 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp'}}
+2024-12-10 17:13:43,972 - INFO - 成功創建任務，task_id: 2a072400-14a1-4eb7-a3b8-e29438ebed01
+2024-12-10 17:13:43,972 - INFO - PIAPI 響應狀態碼: 200
+2024-12-10 17:13:43,972 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"2a072400-14a1-4eb7-a3b8-e29438ebed01","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg","target_image":"https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp"},"output":null,"meta":{"created_at":"2024-12-10T09:13:42.629344083Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-10 17:13:43,972 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': '2a072400-14a1-4eb7-a3b8-e29438ebed01', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp'}, 'output': None, 'meta': {'created_at': '2024-12-10T09:13:42.629344083Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:13:43,972 - INFO - 成功創建任務，task_id: 2a072400-14a1-4eb7-a3b8-e29438ebed01
+2024-12-10 17:13:43,972 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-10 17:13:44,742 - INFO - status :{'code': 200, 'data': {'task_id': '2a072400-14a1-4eb7-a3b8-e29438ebed01', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:13:42.629344083Z', 'started_at': '2024-12-10T09:13:43.682148805Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:13:44,742 - DEBUG - 任務狀態: processing
+2024-12-10 17:13:46,757 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-10 17:13:47,541 - INFO - status :{'code': 200, 'data': {'task_id': '2a072400-14a1-4eb7-a3b8-e29438ebed01', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:13:42.629344083Z', 'started_at': '2024-12-10T09:13:43.682148805Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:13:47,541 - DEBUG - 任務狀態: processing
+2024-12-10 17:13:49,549 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-10 17:13:50,311 - INFO - status :{'code': 200, 'data': {'task_id': '2a072400-14a1-4eb7-a3b8-e29438ebed01', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:13:42.629344083Z', 'started_at': '2024-12-10T09:13:43.682148805Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:13:50,327 - DEBUG - 任務狀態: processing
+2024-12-10 17:13:52,328 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-10 17:13:53,112 - INFO - status :{'code': 200, 'data': {'task_id': '2a072400-14a1-4eb7-a3b8-e29438ebed01', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:13:42.629344083Z', 'started_at': '2024-12-10T09:13:43.682148805Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:13:53,112 - DEBUG - 任務狀態: processing
+2024-12-10 17:13:55,126 - DEBUG - 正在檢查任務狀態，第 5 次嘗試
+2024-12-10 17:13:55,891 - INFO - status :{'code': 200, 'data': {'task_id': '2a072400-14a1-4eb7-a3b8-e29438ebed01', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/b0747d94-879b-40bc-ac9b-98d957264636.png'}, 'meta': {'created_at': '2024-12-10T09:13:42.629344083Z', 'started_at': '2024-12-10T09:13:43.682148805Z', 'ended_at': '2024-12-10T09:13:54.417026089Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:13:55,891 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/b0747d94-879b-40bc-ac9b-98d957264636.png
+2024-12-10 17:13:57,060 - INFO - 開始上傳圖片: success_1733822037.jpg
+2024-12-10 17:14:00,006 - INFO - 圖片上傳成功: https://i.ibb.co/z8zCns2/success-1733822037-jpg.jpg
+2024-12-10 17:14:00,025 - INFO - 成功記錄圖片資訊: {'timestamp': 1733822037, 'url': 'https://i.ibb.co/z8zCns2/success-1733822037-jpg.jpg'}
+2024-12-10 17:14:00,025 - INFO - 成功上傳圖片到 imgbb, URL: https://i.ibb.co/z8zCns2/success-1733822037-jpg.jpg
+2024-12-10 17:14:15,381 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'photo_2024-12-10_17-07-03.jpg' ('image/jpeg')>), ('target', <FileStorage: 'xms2.jpg' ('image/jpeg')>)]) 
+2024-12-10 17:14:15,381 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 17:14:15,381 - INFO - 開始上傳圖片: source_1733822055.jpg
+2024-12-10 17:14:16,300 - INFO - 圖片上傳成功: https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg
+2024-12-10 17:14:16,300 - INFO - 開始上傳圖片: target_1733822056.jpg
+2024-12-10 17:14:18,069 - INFO - 圖片上傳成功: https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp
+2024-12-10 17:14:18,069 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp'}}
+2024-12-10 17:14:19,735 - INFO - 成功創建任務，task_id: 4e48fb77-724a-4fc1-ad3f-68615b9a4bd8
+2024-12-10 17:14:19,735 - INFO - PIAPI 響應狀態碼: 200
+2024-12-10 17:14:19,735 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"4e48fb77-724a-4fc1-ad3f-68615b9a4bd8","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg","target_image":"https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp"},"output":null,"meta":{"created_at":"2024-12-10T09:14:18.560288986Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-10 17:14:19,745 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': '4e48fb77-724a-4fc1-ad3f-68615b9a4bd8', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp'}, 'output': None, 'meta': {'created_at': '2024-12-10T09:14:18.560288986Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:14:19,745 - INFO - 成功創建任務，task_id: 4e48fb77-724a-4fc1-ad3f-68615b9a4bd8
+2024-12-10 17:14:19,745 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-10 17:14:20,536 - INFO - status :{'code': 200, 'data': {'task_id': '4e48fb77-724a-4fc1-ad3f-68615b9a4bd8', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:14:18.560288986Z', 'started_at': '2024-12-10T09:14:19.442530701Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:14:20,536 - DEBUG - 任務狀態: processing
+2024-12-10 17:14:22,538 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-10 17:14:23,536 - INFO - status :{'code': 200, 'data': {'task_id': '4e48fb77-724a-4fc1-ad3f-68615b9a4bd8', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:14:18.560288986Z', 'started_at': '2024-12-10T09:14:19.442530701Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:14:23,536 - DEBUG - 任務狀態: processing
+2024-12-10 17:14:25,541 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-10 17:14:26,353 - INFO - status :{'code': 200, 'data': {'task_id': '4e48fb77-724a-4fc1-ad3f-68615b9a4bd8', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:14:18.560288986Z', 'started_at': '2024-12-10T09:14:19.442530701Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:14:26,353 - DEBUG - 任務狀態: processing
+2024-12-10 17:14:28,363 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-10 17:14:29,402 - INFO - status :{'code': 200, 'data': {'task_id': '4e48fb77-724a-4fc1-ad3f-68615b9a4bd8', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/VxryMK3/source-1733821968-jpg.jpg', 'target_image': 'https://i.ibb.co/0c8p5c4/target-1733822018-jpg.webp', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/e654d3c0-8dbd-43ec-9b26-fa155a59317d.png'}, 'meta': {'created_at': '2024-12-10T09:14:18.560288986Z', 'started_at': '2024-12-10T09:14:19.442530701Z', 'ended_at': '2024-12-10T09:14:27.900079332Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:14:29,402 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/e654d3c0-8dbd-43ec-9b26-fa155a59317d.png
+2024-12-10 17:14:30,607 - INFO - 開始上傳圖片: success_1733822070.jpg
+2024-12-10 17:14:33,821 - INFO - 圖片上傳成功: https://i.ibb.co/56gB9Zj/success-1733822070-jpg.jpg
+2024-12-10 17:14:33,854 - INFO - 成功記錄圖片資訊: {'timestamp': 1733822070, 'url': 'https://i.ibb.co/56gB9Zj/success-1733822070-jpg.jpg'}
+2024-12-10 17:14:33,854 - INFO - 成功上傳圖片到 imgbb, URL: https://i.ibb.co/56gB9Zj/success-1733822070-jpg.jpg
+2024-12-10 17:42:41,859 - INFO - 正在讀取圖片目錄: img
+2024-12-10 17:42:41,860 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 17:42:41,860 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 17:42:41,860 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 17:42:41,861 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 17:42:41,861 - INFO - 找到 4 張圖片
+2024-12-10 17:42:45,210 - INFO - 正在讀取圖片目錄: img
+2024-12-10 17:42:45,210 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 17:42:45,211 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 17:42:45,211 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 17:42:45,212 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 17:42:45,212 - INFO - 找到 4 張圖片
+2024-12-10 17:42:51,023 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'source_photo.jpg' ('image/jpeg')>), ('target', <FileStorage: 'target_photo.jpg' ('image/jpeg')>)]) 
+2024-12-10 17:42:51,025 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 17:42:51,026 - INFO - 開始上傳圖片: source_1733823771.jpg
+2024-12-10 17:42:52,472 - INFO - 圖片上傳成功: https://i.ibb.co/YNFHj82/source-1733823771-jpg.jpg
+2024-12-10 17:42:52,472 - INFO - 開始上傳圖片: target_1733823772.jpg
+2024-12-10 17:42:54,913 - INFO - 圖片上傳成功: https://i.ibb.co/6XQCs73/target-1733823772-jpg.jpg
+2024-12-10 17:42:54,913 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/YNFHj82/source-1733823771-jpg.jpg', 'target_image': 'https://i.ibb.co/6XQCs73/target-1733823772-jpg.jpg'}}
+2024-12-10 17:42:57,389 - INFO - 成功創建任務，task_id: 68427317-fc76-475b-8d29-b031cce4e8d3
+2024-12-10 17:42:57,389 - INFO - PIAPI 響應狀態碼: 200
+2024-12-10 17:42:57,389 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"68427317-fc76-475b-8d29-b031cce4e8d3","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/YNFHj82/source-1733823771-jpg.jpg","target_image":"https://i.ibb.co/6XQCs73/target-1733823772-jpg.jpg"},"output":null,"meta":{"created_at":"2024-12-10T09:42:55.474957823Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-10 17:42:57,389 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': '68427317-fc76-475b-8d29-b031cce4e8d3', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/YNFHj82/source-1733823771-jpg.jpg', 'target_image': 'https://i.ibb.co/6XQCs73/target-1733823772-jpg.jpg'}, 'output': None, 'meta': {'created_at': '2024-12-10T09:42:55.474957823Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:42:57,389 - INFO - 成功創建任務，task_id: 68427317-fc76-475b-8d29-b031cce4e8d3
+2024-12-10 17:42:57,405 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-10 17:42:58,184 - INFO - status :{'code': 200, 'data': {'task_id': '68427317-fc76-475b-8d29-b031cce4e8d3', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/YNFHj82/source-1733823771-jpg.jpg', 'target_image': 'https://i.ibb.co/6XQCs73/target-1733823772-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:42:55.474957823Z', 'started_at': '2024-12-10T09:42:57.101041114Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:42:58,184 - DEBUG - 任務狀態: processing
+2024-12-10 17:43:00,191 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-10 17:43:00,952 - INFO - status :{'code': 200, 'data': {'task_id': '68427317-fc76-475b-8d29-b031cce4e8d3', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/YNFHj82/source-1733823771-jpg.jpg', 'target_image': 'https://i.ibb.co/6XQCs73/target-1733823772-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:42:55.474957823Z', 'started_at': '2024-12-10T09:42:57.101041114Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:43:00,952 - DEBUG - 任務狀態: processing
+2024-12-10 17:43:02,966 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-10 17:43:03,583 - INFO - status :{'code': 200, 'data': {'task_id': '68427317-fc76-475b-8d29-b031cce4e8d3', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/YNFHj82/source-1733823771-jpg.jpg', 'target_image': 'https://i.ibb.co/6XQCs73/target-1733823772-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:42:55.474957823Z', 'started_at': '2024-12-10T09:42:57.101041114Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:43:03,589 - DEBUG - 任務狀態: processing
+2024-12-10 17:43:05,591 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-10 17:43:06,373 - INFO - status :{'code': 200, 'data': {'task_id': '68427317-fc76-475b-8d29-b031cce4e8d3', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/YNFHj82/source-1733823771-jpg.jpg', 'target_image': 'https://i.ibb.co/6XQCs73/target-1733823772-jpg.jpg', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/081839cf-d83e-4ebb-be2b-fd69bc7678a2.png'}, 'meta': {'created_at': '2024-12-10T09:42:55.474957823Z', 'started_at': '2024-12-10T09:42:57.101041114Z', 'ended_at': '2024-12-10T09:43:05.610628286Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:43:06,374 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/081839cf-d83e-4ebb-be2b-fd69bc7678a2.png
+2024-12-10 17:43:07,591 - INFO - 開始上傳圖片: success_1733823787.jpg
+2024-12-10 17:43:10,967 - INFO - 圖片上傳成功: https://i.ibb.co/1dZqGkK/success-1733823787-jpg.jpg
+2024-12-10 17:43:10,967 - INFO - 成功記錄圖片資訊: {'timestamp': 1733823787, 'url': 'https://i.ibb.co/1dZqGkK/success-1733823787-jpg.jpg'}
+2024-12-10 17:43:10,967 - INFO - 成功上傳圖片到 imgbb, URL: https://i.ibb.co/1dZqGkK/success-1733823787-jpg.jpg
+2024-12-10 17:45:43,452 - INFO - 正在讀取圖片目錄: img
+2024-12-10 17:45:43,456 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 17:45:43,457 - INFO - 找到圖片: 2.jpg, 完整路徑: img\2.jpg
+2024-12-10 17:45:43,457 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 17:45:43,458 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 17:45:43,459 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 17:45:43,459 - INFO - 找到 5 張圖片
+2024-12-10 17:45:46,274 - INFO - 正在讀取圖片目錄: img
+2024-12-10 17:45:46,274 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 17:45:46,274 - INFO - 找到圖片: 2.jpg, 完整路徑: img\2.jpg
+2024-12-10 17:45:46,274 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 17:45:46,274 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 17:45:46,274 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 17:45:46,274 - INFO - 找到 5 張圖片
+2024-12-10 17:45:56,630 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'source_photo.jpg' ('image/jpeg')>), ('target', <FileStorage: 'target_photo.jpg' ('image/jpeg')>)]) 
+2024-12-10 17:45:56,631 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 17:45:56,632 - INFO - 開始上傳圖片: source_1733823956.jpg
+2024-12-10 17:45:58,057 - INFO - 圖片上傳成功: https://i.ibb.co/b3QRh2b/source-1733823956-jpg.jpg
+2024-12-10 17:45:58,057 - INFO - 開始上傳圖片: target_1733823958.jpg
+2024-12-10 17:46:00,494 - INFO - 圖片上傳成功: https://i.ibb.co/BCDB32L/target-1733823958-jpg.jpg
+2024-12-10 17:46:00,494 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/b3QRh2b/source-1733823956-jpg.jpg', 'target_image': 'https://i.ibb.co/BCDB32L/target-1733823958-jpg.jpg'}}
+2024-12-10 17:46:02,888 - INFO - 成功創建任務，task_id: aa43a6c8-0518-4889-8cb5-9812e3252bb4
+2024-12-10 17:46:02,888 - INFO - PIAPI 響應狀態碼: 200
+2024-12-10 17:46:02,888 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"aa43a6c8-0518-4889-8cb5-9812e3252bb4","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/b3QRh2b/source-1733823956-jpg.jpg","target_image":"https://i.ibb.co/BCDB32L/target-1733823958-jpg.jpg"},"output":null,"meta":{"created_at":"2024-12-10T09:46:01.032324943Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-10 17:46:02,888 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': 'aa43a6c8-0518-4889-8cb5-9812e3252bb4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/b3QRh2b/source-1733823956-jpg.jpg', 'target_image': 'https://i.ibb.co/BCDB32L/target-1733823958-jpg.jpg'}, 'output': None, 'meta': {'created_at': '2024-12-10T09:46:01.032324943Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:46:02,888 - INFO - 成功創建任務，task_id: aa43a6c8-0518-4889-8cb5-9812e3252bb4
+2024-12-10 17:46:02,888 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-10 17:46:03,682 - INFO - status :{'code': 200, 'data': {'task_id': 'aa43a6c8-0518-4889-8cb5-9812e3252bb4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/b3QRh2b/source-1733823956-jpg.jpg', 'target_image': 'https://i.ibb.co/BCDB32L/target-1733823958-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:46:01.032324943Z', 'started_at': '2024-12-10T09:46:02.606590782Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:46:03,682 - DEBUG - 任務狀態: processing
+2024-12-10 17:46:05,693 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-10 17:46:06,505 - INFO - status :{'code': 200, 'data': {'task_id': 'aa43a6c8-0518-4889-8cb5-9812e3252bb4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/b3QRh2b/source-1733823956-jpg.jpg', 'target_image': 'https://i.ibb.co/BCDB32L/target-1733823958-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:46:01.032324943Z', 'started_at': '2024-12-10T09:46:02.606590782Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:46:06,505 - DEBUG - 任務狀態: processing
+2024-12-10 17:46:08,517 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-10 17:46:09,286 - INFO - status :{'code': 200, 'data': {'task_id': 'aa43a6c8-0518-4889-8cb5-9812e3252bb4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/b3QRh2b/source-1733823956-jpg.jpg', 'target_image': 'https://i.ibb.co/BCDB32L/target-1733823958-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:46:01.032324943Z', 'started_at': '2024-12-10T09:46:02.606590782Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:46:09,302 - DEBUG - 任務狀態: processing
+2024-12-10 17:46:11,303 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-10 17:46:12,073 - INFO - status :{'code': 200, 'data': {'task_id': 'aa43a6c8-0518-4889-8cb5-9812e3252bb4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/b3QRh2b/source-1733823956-jpg.jpg', 'target_image': 'https://i.ibb.co/BCDB32L/target-1733823958-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T09:46:01.032324943Z', 'started_at': '2024-12-10T09:46:02.606590782Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:46:12,073 - DEBUG - 任務狀態: processing
+2024-12-10 17:46:14,077 - DEBUG - 正在檢查任務狀態，第 5 次嘗試
+2024-12-10 17:46:14,860 - INFO - status :{'code': 200, 'data': {'task_id': 'aa43a6c8-0518-4889-8cb5-9812e3252bb4', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/b3QRh2b/source-1733823956-jpg.jpg', 'target_image': 'https://i.ibb.co/BCDB32L/target-1733823958-jpg.jpg', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/671ee1b5-c563-406a-9674-b4fd4e0be4c1.png'}, 'meta': {'created_at': '2024-12-10T09:46:01.032324943Z', 'started_at': '2024-12-10T09:46:02.606590782Z', 'ended_at': '2024-12-10T09:46:13.064060942Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 17:46:14,860 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/671ee1b5-c563-406a-9674-b4fd4e0be4c1.png
+2024-12-10 17:46:16,061 - INFO - 開始上傳圖片: success_1733823976.jpg
+2024-12-10 17:46:19,303 - INFO - 圖片上傳成功: https://i.ibb.co/vvsn6bP/success-1733823976-jpg.jpg
+2024-12-10 17:46:19,303 - INFO - 成功記錄圖片資訊: {'timestamp': 1733823976, 'url': 'https://i.ibb.co/vvsn6bP/success-1733823976-jpg.jpg'}
+2024-12-10 17:46:19,303 - INFO - 成功上傳圖片到 imgbb, URL: https://i.ibb.co/vvsn6bP/success-1733823976-jpg.jpg
+2024-12-10 18:03:52,342 - INFO - 正在讀取圖片目錄: img
+2024-12-10 18:03:52,345 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 18:03:52,346 - INFO - 找到圖片: 2.jpg, 完整路徑: img\2.jpg
+2024-12-10 18:03:52,346 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 18:03:52,348 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 18:03:52,349 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 18:03:52,349 - INFO - 找到圖片: ok1.png, 完整路徑: img\ok1.png
+2024-12-10 18:03:52,349 - INFO - 找到圖片: ok2.png, 完整路徑: img\ok2.png
+2024-12-10 18:03:52,349 - INFO - 找到 7 張圖片
+2024-12-10 18:03:54,982 - INFO - 正在讀取圖片目錄: img
+2024-12-10 18:03:54,983 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 18:03:54,983 - INFO - 找到圖片: 2.jpg, 完整路徑: img\2.jpg
+2024-12-10 18:03:54,983 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 18:03:54,984 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 18:03:54,984 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 18:03:54,984 - INFO - 找到圖片: ok1.png, 完整路徑: img\ok1.png
+2024-12-10 18:03:54,985 - INFO - 找到圖片: ok2.png, 完整路徑: img\ok2.png
+2024-12-10 18:03:54,986 - INFO - 找到 7 張圖片
+2024-12-10 18:04:07,274 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'source_photo.jpg' ('image/jpeg')>), ('target', <FileStorage: 'target_photo.jpg' ('image/jpeg')>)]) 
+2024-12-10 18:04:07,275 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 18:04:07,276 - INFO - 開始上傳圖片: source_1733825047.jpg
+2024-12-10 18:04:08,759 - INFO - 圖片上傳成功: https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg
+2024-12-10 18:04:08,759 - INFO - 開始上傳圖片: target_1733825048.jpg
+2024-12-10 18:04:13,430 - INFO - 圖片上傳成功: https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png
+2024-12-10 18:04:13,430 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg', 'target_image': 'https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png'}}
+2024-12-10 18:04:16,950 - INFO - 成功創建任務，task_id: 60690221-760c-4882-af3c-84e9b40cc0c0
+2024-12-10 18:04:16,951 - INFO - PIAPI 響應狀態碼: 200
+2024-12-10 18:04:16,952 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"60690221-760c-4882-af3c-84e9b40cc0c0","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg","target_image":"https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png"},"output":null,"meta":{"created_at":"2024-12-10T10:04:14.645403954Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-10 18:04:16,954 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': '60690221-760c-4882-af3c-84e9b40cc0c0', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg', 'target_image': 'https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png'}, 'output': None, 'meta': {'created_at': '2024-12-10T10:04:14.645403954Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 18:04:16,955 - INFO - 成功創建任務，task_id: 60690221-760c-4882-af3c-84e9b40cc0c0
+2024-12-10 18:04:16,955 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-10 18:04:17,749 - INFO - status :{'code': 200, 'data': {'task_id': '60690221-760c-4882-af3c-84e9b40cc0c0', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg', 'target_image': 'https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T10:04:14.645403954Z', 'started_at': '2024-12-10T10:04:16.643333857Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 18:04:17,750 - DEBUG - 任務狀態: processing
+2024-12-10 18:04:19,751 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-10 18:04:20,534 - INFO - status :{'code': 200, 'data': {'task_id': '60690221-760c-4882-af3c-84e9b40cc0c0', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg', 'target_image': 'https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T10:04:14.645403954Z', 'started_at': '2024-12-10T10:04:16.643333857Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 18:04:20,534 - DEBUG - 任務狀態: processing
+2024-12-10 18:04:22,539 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-10 18:04:23,317 - INFO - status :{'code': 200, 'data': {'task_id': '60690221-760c-4882-af3c-84e9b40cc0c0', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg', 'target_image': 'https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T10:04:14.645403954Z', 'started_at': '2024-12-10T10:04:16.643333857Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 18:04:23,333 - DEBUG - 任務狀態: processing
+2024-12-10 18:04:25,334 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-10 18:04:26,127 - INFO - status :{'code': 200, 'data': {'task_id': '60690221-760c-4882-af3c-84e9b40cc0c0', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg', 'target_image': 'https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T10:04:14.645403954Z', 'started_at': '2024-12-10T10:04:16.643333857Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 18:04:26,129 - DEBUG - 任務狀態: processing
+2024-12-10 18:04:28,130 - DEBUG - 正在檢查任務狀態，第 5 次嘗試
+2024-12-10 18:04:28,905 - INFO - status :{'code': 200, 'data': {'task_id': '60690221-760c-4882-af3c-84e9b40cc0c0', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg', 'target_image': 'https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T10:04:14.645403954Z', 'started_at': '2024-12-10T10:04:16.643333857Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 18:04:28,905 - DEBUG - 任務狀態: processing
+2024-12-10 18:04:30,921 - DEBUG - 正在檢查任務狀態，第 6 次嘗試
+2024-12-10 18:04:31,727 - INFO - status :{'code': 200, 'data': {'task_id': '60690221-760c-4882-af3c-84e9b40cc0c0', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/DGNgw7b/source-1733825047-jpg.jpg', 'target_image': 'https://i.ibb.co/WvY9TGY/target-1733825048-jpg.png', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/404af169-68bd-40ce-bdb2-fa286708fa79.png'}, 'meta': {'created_at': '2024-12-10T10:04:14.645403954Z', 'started_at': '2024-12-10T10:04:16.643333857Z', 'ended_at': '2024-12-10T10:04:29.5173081Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 18:04:31,733 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/404af169-68bd-40ce-bdb2-fa286708fa79.png
+2024-12-10 18:04:32,997 - INFO - 開始上傳圖片: success_1733825072.jpg
+2024-12-10 18:04:36,576 - INFO - 圖片上傳成功: https://i.ibb.co/LkzQ3vF/success-1733825072-jpg.jpg
+2024-12-10 18:04:36,591 - INFO - 成功記錄圖片資訊: {'timestamp': 1733825072, 'url': 'https://i.ibb.co/LkzQ3vF/success-1733825072-jpg.jpg'}
+2024-12-10 18:04:36,592 - INFO - 成功上傳圖片到 imgbb, URL: https://i.ibb.co/LkzQ3vF/success-1733825072-jpg.jpg
+2024-12-10 21:41:13,780 - INFO - 正在讀取圖片目錄: img
+2024-12-10 21:41:13,781 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 21:41:13,782 - INFO - 找到圖片: 2.jpg, 完整路徑: img\2.jpg
+2024-12-10 21:41:13,782 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 21:41:13,782 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 21:41:13,783 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 21:41:13,783 - INFO - 找到圖片: is ok b 1.jpg, 完整路徑: img\is ok b 1.jpg
+2024-12-10 21:41:13,783 - INFO - 找到圖片: is ok g 1.jpg, 完整路徑: img\is ok g 1.jpg
+2024-12-10 21:41:13,784 - INFO - 找到圖片: ok1.png, 完整路徑: img\ok1.png
+2024-12-10 21:41:13,784 - INFO - 找到圖片: ok2.png, 完整路徑: img\ok2.png
+2024-12-10 21:41:13,784 - INFO - 找到 9 張圖片
+2024-12-10 21:41:27,092 - INFO - 正在讀取圖片目錄: img
+2024-12-10 21:41:27,094 - INFO - 找到圖片: 1.jpg, 完整路徑: img\1.jpg
+2024-12-10 21:41:27,095 - INFO - 找到圖片: 2.jpg, 完整路徑: img\2.jpg
+2024-12-10 21:41:27,096 - INFO - 找到圖片: 3.jpg, 完整路徑: img\3.jpg
+2024-12-10 21:41:27,096 - INFO - 找到圖片: binsMind-3.jpg, 完整路徑: img\binsMind-3.jpg
+2024-12-10 21:41:27,106 - INFO - 找到圖片: insMind-3.jpg, 完整路徑: img\insMind-3.jpg
+2024-12-10 21:41:27,107 - INFO - 找到圖片: is ok b 1.jpg, 完整路徑: img\is ok b 1.jpg
+2024-12-10 21:41:27,116 - INFO - 找到圖片: is ok g 1.jpg, 完整路徑: img\is ok g 1.jpg
+2024-12-10 21:41:27,124 - INFO - 找到圖片: ok1.png, 完整路徑: img\ok1.png
+2024-12-10 21:41:27,126 - INFO - 找到圖片: ok2.png, 完整路徑: img\ok2.png
+2024-12-10 21:41:27,127 - INFO - 找到 9 張圖片
+2024-12-10 21:45:00,525 - INFO - request.files ImmutableMultiDict([('source', <FileStorage: 'source_photo.jpg' ('image/jpeg')>), ('target', <FileStorage: 'target_photo.jpg' ('image/jpeg')>)]) 
+2024-12-10 21:45:00,539 - INFO - source file: <class 'werkzeug.datastructures.file_storage.FileStorage'>
+2024-12-10 21:45:00,539 - INFO - 開始上傳圖片: source_1733838300.jpg
+2024-12-10 21:45:02,490 - INFO - 圖片上傳成功: https://i.ibb.co/h80N8RV/source-1733838300-jpg.jpg
+2024-12-10 21:45:02,490 - INFO - 開始上傳圖片: target_1733838302.jpg
+2024-12-10 21:45:05,159 - INFO - 圖片上傳成功: https://i.ibb.co/bKJ8hvq/target-1733838302-jpg.jpg
+2024-12-10 21:45:05,159 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/h80N8RV/source-1733838300-jpg.jpg', 'target_image': 'https://i.ibb.co/bKJ8hvq/target-1733838302-jpg.jpg'}}
+2024-12-10 21:45:08,319 - INFO - 成功創建任務，task_id: e00339ff-f518-421a-8ef1-ec1a5161ff8a
+2024-12-10 21:45:08,319 - INFO - PIAPI 響應狀態碼: 200
+2024-12-10 21:45:08,319 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"e00339ff-f518-421a-8ef1-ec1a5161ff8a","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/h80N8RV/source-1733838300-jpg.jpg","target_image":"https://i.ibb.co/bKJ8hvq/target-1733838302-jpg.jpg"},"output":null,"meta":{"created_at":"2024-12-10T13:45:05.635098736Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-12-10 21:45:08,319 - INFO - responses 響應內容: {'code': 200, 'data': {'task_id': 'e00339ff-f518-421a-8ef1-ec1a5161ff8a', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'pending', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'workflow_type': '', 'swap_image': 'https://i.ibb.co/h80N8RV/source-1733838300-jpg.jpg', 'target_image': 'https://i.ibb.co/bKJ8hvq/target-1733838302-jpg.jpg'}, 'output': None, 'meta': {'created_at': '2024-12-10T13:45:05.635098736Z', 'started_at': '0001-01-01T00:00:00Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 21:45:08,335 - INFO - 成功創建任務，task_id: e00339ff-f518-421a-8ef1-ec1a5161ff8a
+2024-12-10 21:45:08,335 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-12-10 21:45:08,700 - INFO - status :{'code': 200, 'data': {'task_id': 'e00339ff-f518-421a-8ef1-ec1a5161ff8a', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/h80N8RV/source-1733838300-jpg.jpg', 'target_image': 'https://i.ibb.co/bKJ8hvq/target-1733838302-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T13:45:05.635098736Z', 'started_at': '2024-12-10T13:45:08.002037588Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 21:45:08,700 - DEBUG - 任務狀態: processing
+2024-12-10 21:45:10,706 - DEBUG - 正在檢查任務狀態，第 2 次嘗試
+2024-12-10 21:45:11,349 - INFO - status :{'code': 200, 'data': {'task_id': 'e00339ff-f518-421a-8ef1-ec1a5161ff8a', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/h80N8RV/source-1733838300-jpg.jpg', 'target_image': 'https://i.ibb.co/bKJ8hvq/target-1733838302-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T13:45:05.635098736Z', 'started_at': '2024-12-10T13:45:08.002037588Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 21:45:11,354 - DEBUG - 任務狀態: processing
+2024-12-10 21:45:13,357 - DEBUG - 正在檢查任務狀態，第 3 次嘗試
+2024-12-10 21:45:13,970 - INFO - status :{'code': 200, 'data': {'task_id': 'e00339ff-f518-421a-8ef1-ec1a5161ff8a', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/h80N8RV/source-1733838300-jpg.jpg', 'target_image': 'https://i.ibb.co/bKJ8hvq/target-1733838302-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T13:45:05.635098736Z', 'started_at': '2024-12-10T13:45:08.002037588Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 21:45:13,970 - DEBUG - 任務狀態: processing
+2024-12-10 21:45:15,974 - DEBUG - 正在檢查任務狀態，第 4 次嘗試
+2024-12-10 21:45:16,605 - INFO - status :{'code': 200, 'data': {'task_id': 'e00339ff-f518-421a-8ef1-ec1a5161ff8a', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'processing', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/h80N8RV/source-1733838300-jpg.jpg', 'target_image': 'https://i.ibb.co/bKJ8hvq/target-1733838302-jpg.jpg', 'workflow_type': ''}, 'output': None, 'meta': {'created_at': '2024-12-10T13:45:05.635098736Z', 'started_at': '2024-12-10T13:45:08.002037588Z', 'ended_at': '0001-01-01T00:00:00Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 21:45:16,605 - DEBUG - 任務狀態: processing
+2024-12-10 21:45:18,610 - DEBUG - 正在檢查任務狀態，第 5 次嘗試
+2024-12-10 21:45:18,945 - INFO - status :{'code': 200, 'data': {'task_id': 'e00339ff-f518-421a-8ef1-ec1a5161ff8a', 'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'status': 'completed', 'config': {'service_mode': '', 'webhook_config': {'endpoint': '', 'secret': ''}}, 'input': {'swap_image': 'https://i.ibb.co/h80N8RV/source-1733838300-jpg.jpg', 'target_image': 'https://i.ibb.co/bKJ8hvq/target-1733838302-jpg.jpg', 'workflow_type': ''}, 'output': {'image_base64': '', 'image_url': 'https://img.midjourneyapi.xyz/temp/f3c68393-48b0-4309-a48e-a5cbcfcc7c37.png'}, 'meta': {'created_at': '2024-12-10T13:45:05.635098736Z', 'started_at': '2024-12-10T13:45:08.002037588Z', 'ended_at': '2024-12-10T13:45:17.817079592Z', 'usage': {'type': 'quota', 'frozen': 0, 'consume': 100000}, 'is_using_private_pool': False}, 'detail': None, 'logs': [], 'error': {'code': 0, 'raw_message': '', 'message': '', 'detail': None}}, 'message': 'success'}
+2024-12-10 21:45:18,945 - INFO - 任務完成，結果 URL: https://img.midjourneyapi.xyz/temp/f3c68393-48b0-4309-a48e-a5cbcfcc7c37.png
+2024-12-10 21:45:19,232 - ERROR - 上傳圖片到 imgbb 過程發生錯誤: ('Connection aborted.', ConnectionResetError(10054, '遠端主機已強制關閉一個現存的連線。', None, 10054, None))

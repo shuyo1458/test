@@ -1,0 +1,243 @@
+2024-11-28 20:00:00,360 - INFO - 啟動 Face Swap API 服務
+2024-11-28 20:00:00,882 - INFO - 啟動 Face Swap API 服務
+2024-11-28 20:01:01,792 - INFO - 啟動 Face Swap API 服務
+2024-11-28 20:10:12,929 - INFO - 啟動 Face Swap API 服務
+2024-11-28 20:10:13,378 - INFO - 啟動 Face Swap API 服務
+2024-11-28 20:13:53,997 - INFO - 啟動 Face Swap API 服務
+2024-11-28 20:14:41,114 - INFO - 開始發送請求到 PIAPI
+2024-11-28 20:14:44,686 - ERROR - PIAPI 請求失敗: 502
+2024-11-28 20:20:42,724 - INFO - 啟動 Face Swap API 服務
+2024-11-28 20:32:56,464 - INFO - 啟動 Face Swap API 服務
+2024-11-28 20:32:57,790 - INFO - 啟動 Face Swap API 服務
+2024-11-28 20:33:23,013 - ERROR - Google Drive 上傳失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 20:33:23,015 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\app.py", line 93, in upload_to_google_drive
+    service = get_google_drive_service()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\app.py", line 81, in get_google_drive_service
+    flow = InstalledAppFlow.from_client_secrets_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_workplace\venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'credentials.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python_workplace\app.py", line 255, in test_faceswap
+    source_url = upload_to_google_drive(source_file, f"source_{int(time.time())}.jpg")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\app.py", line 135, in upload_to_google_drive
+    raise Exception("圖片上傳失敗")
+Exception: 圖片上傳失敗
+2024-11-28 21:04:53,634 - INFO - 啟動 Face Swap API 服務
+2024-11-28 21:05:29,435 - ERROR - Google Drive 上傳失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 21:05:29,436 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\app.py", line 93, in upload_to_google_drive
+    service = get_google_drive_service()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\app.py", line 81, in get_google_drive_service
+    flow = InstalledAppFlow.from_client_secrets_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_workplace\venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'credentials.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python_workplace\app.py", line 255, in test_faceswap
+    source_url = upload_to_google_drive(source_file, f"source_{int(time.time())}.jpg")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\app.py", line 135, in upload_to_google_drive
+    raise Exception("圖片上傳失敗")
+Exception: 圖片上傳失敗
+2024-11-28 21:07:51,082 - INFO - 啟動 Face Swap API 服務
+2024-11-28 21:08:22,683 - ERROR - Google Drive 上傳失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 21:08:22,684 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\app.py", line 93, in upload_to_google_drive
+    service = get_google_drive_service()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\app.py", line 81, in get_google_drive_service
+    flow = InstalledAppFlow.from_client_secrets_file(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python_workplace\venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 198, in from_client_secrets_file
+    with open(client_secrets_file, "r") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'credentials.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python_workplace\app.py", line 255, in test_faceswap
+    source_url = upload_to_google_drive(source_file, f"source_{int(time.time())}.jpg")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\app.py", line 135, in upload_to_google_drive
+    raise Exception("圖片上傳失敗")
+Exception: 圖片上傳失敗
+2024-11-28 21:18:21,659 - INFO - 啟動 Face Swap API 服務
+2024-11-28 21:18:22,856 - INFO - 啟動 Face Swap API 服務
+2024-11-28 21:18:40,115 - ERROR - 初始化 Google Drive 失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:18:40,115 - ERROR - Google Drive 初始化失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:18:44,572 - ERROR - 初始化 Google Drive 失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:18:44,573 - ERROR - Google Drive 初始化失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:18:46,196 - ERROR - 初始化 Google Drive 失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:18:46,197 - ERROR - Google Drive 初始化失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:18:46,629 - ERROR - 初始化 Google Drive 失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:18:46,630 - ERROR - Google Drive 初始化失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:18:48,843 - ERROR - 初始化 Google Drive 失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:18:48,843 - ERROR - Google Drive 初始化失敗: 找不到 credentials.json 檔案，請確保檔案存在於正確位置
+2024-11-28 21:20:46,260 - INFO - 啟動 Face Swap API 服務
+2024-11-28 21:20:49,462 - ERROR - 初始化 Google Drive 失敗: Can't pickle local object 'OAuth2Session.__init__.<locals>.<lambda>'
+2024-11-28 21:20:49,462 - ERROR - Google Drive 初始化失敗: Can't pickle local object 'OAuth2Session.__init__.<locals>.<lambda>'
+2024-11-28 21:20:51,965 - ERROR - 初始化 Google Drive 失敗: Can't pickle local object 'OAuth2Session.__init__.<locals>.<lambda>'
+2024-11-28 21:20:51,965 - ERROR - Google Drive 初始化失敗: Can't pickle local object 'OAuth2Session.__init__.<locals>.<lambda>'
+2024-11-28 21:21:04,060 - ERROR - 初始化 Google Drive 失敗: Can't pickle local object 'OAuth2Session.__init__.<locals>.<lambda>'
+2024-11-28 21:21:04,060 - ERROR - Google Drive 初始化失敗: Can't pickle local object 'OAuth2Session.__init__.<locals>.<lambda>'
+2024-11-28 21:22:40,362 - INFO - 啟動 Face Swap API 服務
+2024-11-28 21:24:39,837 - INFO - 啟動 Face Swap API 服務
+2024-11-28 21:25:59,739 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:02:57,136 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:06:39,562 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:06:50,187 - ERROR - 獲取 Google Drive service 失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:08:06,981 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:09:11,029 - ERROR - 獲取 Google Drive service 失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:11,031 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:16,160 - ERROR - 獲取 Google Drive service 失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:16,161 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:17,119 - ERROR - 獲取 Google Drive service 失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:17,120 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:17,787 - ERROR - 獲取 Google Drive service 失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:17,788 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:18,527 - ERROR - 獲取 Google Drive service 失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:18,529 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:19,221 - ERROR - 獲取 Google Drive service 失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:19,221 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:19,887 - ERROR - 獲取 Google Drive service 失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:09:19,888 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: [Errno 2] No such file or directory: 'credentials.json'
+2024-11-28 22:19:42,942 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:19:44,247 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:19:54,339 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:19:54,340 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:19:55,507 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:19:55,507 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:19:57,871 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:19:57,871 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:19:59,206 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:19:59,206 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:00,450 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:00,451 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:00,895 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:00,896 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:01,314 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:01,315 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:01,720 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:01,721 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:02,124 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:02,125 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:02,557 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:02,558 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:03,032 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:20:03,033 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:22:19,358 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:30:26,704 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:30:34,915 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:30:34,915 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:30:36,164 - ERROR - 獲取 Google Drive service 失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:30:36,164 - ERROR - Google Drive 授權失敗: Google Drive 服務初始化失敗: type object 'GoogleAuth' has no attribute 'authenticate_user'
+2024-11-28 22:32:20,123 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:32:36,468 - INFO - 開始上傳圖片: source_1732804356.jpg
+2024-11-28 22:32:38,620 - INFO - 圖片上傳成功: https://i.ibb.co/SmdsfWP/source-1732804356-jpg.jpg
+2024-11-28 22:32:38,620 - INFO - 開始上傳圖片: target_1732804358.jpg
+2024-11-28 22:32:45,087 - INFO - 圖片上傳成功: https://i.ibb.co/M655Y4n/target-1732804358-jpg.png
+2024-11-28 22:32:52,255 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 42, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 54, in _handle_api_response
+    return self._poll_task_status(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 77, in _poll_task_status
+    raise Exception("處理失敗")
+Exception: 處理失敗
+2024-11-28 22:32:52,271 - ERROR - FaceSwap 處理失敗: 處理失敗
+2024-11-28 22:36:29,441 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:36:54,030 - INFO - 開始上傳圖片: source_1732804614.jpg
+2024-11-28 22:36:56,135 - INFO - 圖片上傳成功: https://i.ibb.co/QM55Zbc/source-1732804614-jpg.jpg
+2024-11-28 22:36:56,135 - INFO - 開始上傳圖片: target_1732804616.jpg
+2024-11-28 22:36:59,773 - INFO - 圖片上傳成功: https://i.ibb.co/t2LT9vf/target-1732804616-jpg.png
+2024-11-28 22:36:59,773 - INFO - 發送請求到 PIAPI，payload: {'type': 'faceswap', 'input': {'source_image': 'https://i.ibb.co/QM55Zbc/source-1732804614-jpg.jpg', 'target_image': 'https://i.ibb.co/t2LT9vf/target-1732804616-jpg.png'}}
+2024-11-28 22:37:00,674 - INFO - PIAPI 響應狀態碼: 400
+2024-11-28 22:37:00,674 - INFO - PIAPI 響應內容: {"code":400,"data":{"task_id":"","model":"","task_type":"","status":"","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":null,"output":null,"meta":null,"detail":null,"logs":null,"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"invalid model: "}
+2024-11-28 22:37:00,689 - ERROR - PIAPI 請求失敗: 400, 響應: {"code":400,"data":{"task_id":"","model":"","task_type":"","status":"","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":null,"output":null,"meta":null,"detail":null,"logs":null,"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"invalid model: "}
+2024-11-28 22:37:00,690 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 48, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 68, in _handle_api_response
+    raise Exception(f"API 請求失敗: {response.text}")
+Exception: API 請求失敗: {"code":400,"data":{"task_id":"","model":"","task_type":"","status":"","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":null,"output":null,"meta":null,"detail":null,"logs":null,"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"invalid model: "}
+2024-11-28 22:37:00,690 - ERROR - FaceSwap 處理失敗: API 請求失敗: {"code":400,"data":{"task_id":"","model":"","task_type":"","status":"","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":null,"output":null,"meta":null,"detail":null,"logs":null,"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"invalid model: "}
+2024-11-28 22:38:07,328 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:38:57,959 - INFO - 開始上傳圖片: source_1732804737.jpg
+2024-11-28 22:39:00,444 - INFO - 圖片上傳成功: https://i.ibb.co/mRw3dH0/source-1732804737-jpg.jpg
+2024-11-28 22:39:00,444 - INFO - 開始上傳圖片: target_1732804740.jpg
+2024-11-28 22:39:04,511 - INFO - 圖片上傳成功: https://i.ibb.co/Y0bG0C2/target-1732804740-jpg.png
+2024-11-28 22:39:04,511 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/mRw3dH0/source-1732804737-jpg.jpg', 'target_image': 'https://i.ibb.co/Y0bG0C2/target-1732804740-jpg.png'}}
+2024-11-28 22:39:07,673 - INFO - PIAPI 響應狀態碼: 200
+2024-11-28 22:39:07,673 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"93dc9e62-b532-4c84-8b78-aabfe598f624","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/mRw3dH0/source-1732804737-jpg.jpg","target_image":"https://i.ibb.co/Y0bG0C2/target-1732804740-jpg.png"},"output":null,"meta":{"created_at":"2024-11-28T14:39:05.887503326Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-11-28 22:39:07,689 - INFO - 成功創建任務，task_id: 93dc9e62-b532-4c84-8b78-aabfe598f624
+2024-11-28 22:39:07,689 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-11-28 22:39:08,475 - ERROR - 任務失敗: insufficient credits, 402
+failed to do request
+2024-11-28 22:39:08,475 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 49, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 66, in _handle_api_response
+    return self._poll_task_status(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 99, in _poll_task_status
+    raise Exception(f"處理失敗: {error_msg}")
+Exception: 處理失敗: insufficient credits, 402
+failed to do request
+2024-11-28 22:39:08,475 - ERROR - FaceSwap 處理失敗: 處理失敗: insufficient credits, 402
+failed to do request
+2024-11-28 22:42:53,502 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:44:11,557 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:44:12,592 - INFO - 啟動 Face Swap API 服務
+2024-11-28 22:44:46,758 - INFO - 開始上傳圖片: source_1732805086.jpg
+2024-11-28 22:44:48,788 - INFO - 圖片上傳成功: https://i.ibb.co/PhsC2CH/source-1732805086-jpg.jpg
+2024-11-28 22:44:48,788 - INFO - 開始上傳圖片: target_1732805088.jpg
+2024-11-28 22:44:55,804 - INFO - 圖片上傳成功: https://i.ibb.co/gVjKdsQ/target-1732805088-jpg.png
+2024-11-28 22:44:55,804 - INFO - 發送請求到 PIAPI，payload: {'model': 'Qubico/image-toolkit', 'task_type': 'face-swap', 'input': {'swap_image': 'https://i.ibb.co/PhsC2CH/source-1732805086-jpg.jpg', 'target_image': 'https://i.ibb.co/gVjKdsQ/target-1732805088-jpg.png'}}
+2024-11-28 22:44:58,498 - INFO - PIAPI 響應狀態碼: 200
+2024-11-28 22:44:58,498 - INFO - PIAPI 響應內容: {"code":200,"data":{"task_id":"6d97ae79-7130-476f-8878-3bd862722771","model":"Qubico/image-toolkit","task_type":"face-swap","status":"pending","config":{"service_mode":"","webhook_config":{"endpoint":"","secret":""}},"input":{"workflow_type":"","swap_image":"https://i.ibb.co/PhsC2CH/source-1732805086-jpg.jpg","target_image":"https://i.ibb.co/gVjKdsQ/target-1732805088-jpg.png"},"output":null,"meta":{"created_at":"2024-11-28T14:44:57.193011589Z","started_at":"0001-01-01T00:00:00Z","ended_at":"0001-01-01T00:00:00Z","usage":{"type":"quota","frozen":0,"consume":100000},"is_using_private_pool":false},"detail":null,"logs":[],"error":{"code":0,"raw_message":"","message":"","detail":null}},"message":"success"}
+2024-11-28 22:44:58,498 - INFO - 成功創建任務，task_id: 6d97ae79-7130-476f-8878-3bd862722771
+2024-11-28 22:44:58,498 - DEBUG - 正在檢查任務狀態，第 1 次嘗試
+2024-11-28 22:44:59,311 - ERROR - 輪詢任務狀態時發生錯誤: 處理失敗: insufficient credits, 402
+failed to do request
+2024-11-28 22:44:59,311 - ERROR - 處理 API 響應失敗: 處理失敗: insufficient credits, 402
+failed to do request
+2024-11-28 22:44:59,311 - ERROR - 處理請求時發生異常
+Traceback (most recent call last):
+  File "d:\python_workplace\services\faceswap_service.py", line 51, in process_images
+    return self._handle_api_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 74, in _handle_api_response
+    return self._poll_task_status(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\python_workplace\services\faceswap_service.py", line 107, in _poll_task_status
+    raise Exception(f"處理失敗: {error_msg}")
+Exception: 處理失敗: insufficient credits, 402
+failed to do request
+2024-11-28 22:44:59,322 - ERROR - FaceSwap 處理失敗: 處理失敗: insufficient credits, 402
+failed to do request

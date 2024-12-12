@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceSwap 測試頁面</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .image-preview {
+            max-width: 300px;
+            margin: 10px 0;
+        }
+        .result-container {
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>FaceSwap 測試頁面</h1>
+    
+    <form id="faceswapForm">
+        <div>
+            <h3>來源圖片（包含要換的臉）：</h3>
+            <input type="file" id="sourceImage" accept="image/*" required>
+            <img id="sourcePreview" class="image-preview">
+        </div>
+        
+        <div>
+            <h3>目標圖片（要被換臉的圖片）：</h3>
+            <input type="file" id="targetImage" accept="image/*" required>
+            <img id="targetPreview" class="image-preview">
+        </div>
+        
+        <button type="submit">執行換臉</button>
+    </form>
+    
+    <div class="result-container">
+        <h3>結果：</h3>
+        <img id="resultImage" class="image-preview">
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        // 預覽上傳的圖片
+        function previewImage(input, previewElement) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewElement.src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // 設置圖片預覽
+        document.getElementById('sourceImage').addEventListener('change', function() {
+            previewImage(this, document.getElementById('sourcePreview'));
+        });
+        
+        document.getElementById('targetImage').addEventListener('change', function() {
+            previewImage(this, document.getElementById('targetPreview'));
+        });
+
+        // 處理表單提交
+        document.getElementById('faceswapForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            formData.append('source', document.getElementById('sourceImage').files[0]);
+            formData.append('target', document.getElementById('targetImage').files[0]);
+            
+            try {
+                document.getElementById('errorMessage').textContent = '處理中，請稍候...';
+                const response = await fetch('/api/test-faceswap', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    document.getElementById('errorMessage').textContent = data.error;
+                    document.getElementById('resultImage').src = '';
+                } else {
+                    document.getElementById('errorMessage').textContent = '';
+                    document.getElementById('resultImage').src = data.result;
+                }
+            } catch (error) {
+                document.getElementById('errorMessage').textContent = '發生錯誤：' + error.message;
+                document.getElementById('resultImage').src = '';
+            }
+        });
+    </script>
+</body>
+</html> 

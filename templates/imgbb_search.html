@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgBB 圖片搜尋</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .image-preview {
+            max-width: 300px;
+            margin: 10px 0;
+        }
+        .result-container {
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        .search-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .image-card img {
+            width: 100%;
+            height: auto;
+        }
+        .image-card .url {
+            word-break: break-all;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>ImgBB 圖片搜尋</h1>
+    
+    <form id="searchForm">
+        <div class="input-group">
+            <h3>輸入檔案名稱：</h3>
+            <input type="text" id="filename" required placeholder="輸入檔案名稱 (例如: source_1234567890)">
+            <p>提示：可以輸入部分檔名，例如 "source" 或 "success"</p>
+        </div>
+        <button type="submit">搜尋圖片</button>
+    </form>
+    
+    <div class="result-container">
+        <h3>搜尋結果：</h3>
+        <p id="errorMessage" class="error"></p>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const filename = document.getElementById('filename').value;
+            const resultsContainer = document.getElementById('searchResults');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            try {
+                errorMessage.textContent = '搜尋中，請稍候...';
+                resultsContainer.innerHTML = '';
+                
+                const response = await fetch('/api/search-imgbb', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        filename: filename
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    errorMessage.textContent = data.error;
+                    resultsContainer.innerHTML = '';
+                } else {
+                    errorMessage.textContent = '';
+                    
+                    if (data.results.length === 0) {
+                        errorMessage.textContent = '找不到符合的圖片';
+                    } else {
+                        data.results.forEach(image => {
+                            const card = document.createElement('div');
+                            card.className = 'image-card';
+                            card.innerHTML = `
+                                <img src="${image.url}" alt="${image.filename}">
+                                <div class="url">${image.url}</div>
+                                <div>上傳時間: ${image.timestamp}</div>
+                            `;
+                            resultsContainer.appendChild(card);
+                        });
+                    }
+                }
+            } catch (error) {
+                errorMessage.textContent = '發生錯誤：' + error.message;
+                resultsContainer.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+</html>

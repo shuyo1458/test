@@ -1,0 +1,9 @@
+flask==2.0.1
+requests==2.26.0
+werkzeug==2.0.1
+python-dotenv==0.19.0
+numpy
+# 暫時註解掉 Google Drive 相關套件
+# google-auth-oauthlib==1.0.0
+# google-auth-httplib2==0.1.0
+# google-api-python-client==2.86.0 
